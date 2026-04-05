@@ -86,51 +86,19 @@ When told "run ralph on <feature>":
 3. Post progress to Ralph topic after each iteration
 4. Stop when all stories pass or max iterations reached
 
-## Design Preview via Telegram
+## Design Preview via Telegram (Superpowers Integration)
 
-When working on frontend design changes, use the screenshot workflow to show previews to cofounders in Telegram instead of opening a browser.
+The superpowers brainstorming skill has been modified for Telegram mode:
+- Instead of opening a browser, mockups are **screenshotted and sent as photos** to the 🎨 Design topic
+- The skill auto-generates HTML mockups → screenshots them via Puppeteer → sends via Telegram `reply` tool with `files` parameter
+- Users give feedback by replying in the Design topic
+- Preview images have a **1-hour TTL** (auto-cleaned by cron)
 
-### How to Generate and Send Design Previews
+### Screenshot Tool
+```bash
+node scripts/screenshot.js <url_or_html_file> [output_path]
+# Example: screenshot the live dev server
+node scripts/screenshot.js http://localhost:5173 /tmp/design-previews/preview.png
+```
 
-1. **Make the frontend change** in `archetype_frontend/` (Vite HMR auto-reloads)
-2. **Take a screenshot** of the live dev server:
-   ```bash
-   node scripts/screenshot.js http://localhost:5173 /tmp/design-previews/preview-$(date +%s).png
-   ```
-   Or screenshot a specific HTML mockup file:
-   ```bash
-   node scripts/screenshot.js /path/to/mockup.html /tmp/design-previews/mockup-$(date +%s).png
-   ```
-3. **Send to Telegram** via the `reply` tool with `files` parameter:
-   ```
-   reply(chat_id="-1003216362334", text="🎨 Design preview: <description>", files=["/tmp/design-previews/preview-XXXXX.png"], reply_to=<design_topic_message_id>)
-   ```
-4. **Ask for feedback** in the same message — cofounders reply in the topic
-5. **Iterate** — make changes, take new screenshot, send updated preview
-
-### Design Iteration Loop
-When a cofounder requests a design change:
-1. Generate 2-3 design options as separate HTML files
-2. Screenshot each one
-3. Send all screenshots to the 🎨 Design topic with labels (Option A, B, C)
-4. Wait for cofounder feedback
-5. Implement the chosen design
-6. Send final screenshot for confirmation
-
-### Brainstorming with Visual Mockups
-When using the superpowers brainstorming skill for design work:
-1. The skill generates HTML mockup files in a session directory
-2. Screenshot each mockup using the screenshot script
-3. Send screenshots to the 🎨 Design topic for cofounder review
-4. Read cofounder replies for their selection/feedback
-5. Continue iterating based on their input
-
-### Image TTL
-Preview images in `/tmp/design-previews/` are automatically deleted after 1 hour by a cron job. This prevents storage bloat. If you need an image to persist, copy it elsewhere before the TTL expires.
-
-### Screenshot Script Reference
-- **Location**: `scripts/screenshot.js`
-- **Input**: URL or local HTML file path
-- **Output**: PNG at 1280x900
-- **Dependencies**: Puppeteer (bundled Chromium)
-- **Usage**: `node scripts/screenshot.js <url_or_file> [output_path]`
+When a cofounder asks for a design change, use the superpowers brainstorming skill — it will handle the visual companion flow through Telegram automatically.
