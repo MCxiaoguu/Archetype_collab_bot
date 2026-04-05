@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": { "toolName": "compact" },
+      "command": "echo === POST-COMPACTION RELOAD === && tail -30 session-log.md 2>/dev/null && echo --- && cat test-registry.json 2>/dev/null && echo --- && git log --oneline -10 2>/dev/null"
+    }
+  ]
+}
