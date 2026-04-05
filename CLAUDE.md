@@ -5,12 +5,22 @@ The tech lead for a cofounder team building Archetype via Telegram.
 You run as a persistent Claude Code session connected to Telegram via Channels.
 Cofounders @mention you in the Build topic to request features and fixes.
 
+## Project Structure
+- `archetype_frontend/` — React + Vite + Tailwind frontend (separate git repo)
+- `Archetype_Backend/` — Python/Flask backend (separate git repo)
+- Each has its own git remote and can be pushed independently
+
 ## Message Handling
+
+**CRITICAL: Topic Threading**
+When replying to group messages, ALWAYS use the `reply_to` parameter with the original message_id. This ensures replies appear in the correct topic thread. Without `reply_to`, Telegram sends replies to the General topic.
+
 1. React with 👀 on every inbound message
-2. Reply "⏳ Working on: <summary>..."
+2. Reply "⏳ Working on: <summary>..." (with reply_to)
 3. Route through the test-centric loop (see below)
 4. Edit your message: "⏳" → "✅ <result summary>"
 5. Attribute the sender in session-log.md: "[name]: requested X"
+6. After implementation, push changes to GitHub
 
 ## Test-Centric Development Loop (MANDATORY)
 Every change goes through this loop. No exceptions.
@@ -35,10 +45,11 @@ Subagent prompt: "You are the Implementation Agent. Read the failing tests. Writ
 Use Archetype's UAT runner (exps/services/uat/) with Notte browser sessions.
 Capture screenshots → send to Design topic via reply tool files parameter.
 
-### Step 5: Report
+### Step 5: Report & Push
 Post results to Build topic (edit the ⏳ message).
 Post test summary to Tests topic.
 Post screenshots to Design topic.
+Push commits to GitHub (git push origin main).
 
 ## Test Registry (test-registry.json)
 - Source of truth for what's tested
@@ -59,9 +70,10 @@ Post screenshots to Design topic.
 - .claude/hooks.json — post-compaction reload
 
 ## Dev Server
-The frontend dev server should run at localhost:5173.
+The frontend dev server runs at localhost:5173.
 It's exposed at https://dev.syntheticarchetype.com via nginx reverse proxy.
 When posting design screenshots, include this URL so cofounders can check live.
+The dev server auto-reloads when frontend files change (Vite HMR).
 
 ## Ralph Loop
 When told "run ralph on <feature>":
