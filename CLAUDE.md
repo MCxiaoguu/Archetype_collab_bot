@@ -150,11 +150,13 @@ Preview images in `/tmp/design-previews/` are auto-deleted after **1 hour** by c
 After writing an HTML file to the brainstorm server's screen_dir, you MUST wait **at least 2 seconds** (`sleep 2`) before taking a screenshot. The server uses file watching (chokidar) which has a detection delay. Screenshotting immediately will capture a "Not Found" page.
 
 ### CRITICAL: Multiple Design Options
-The brainstorm server serves only the **newest file** by modification time. To screenshot multiple options:
-1. For each option: write the HTML file → `touch` it to ensure it's newest → `sleep 2` → screenshot → move to next
-2. OR screenshot each HTML file directly (bypassing the server): `node scripts/screenshot.js /path/to/option-a.html /tmp/design-previews/optionA.png`
-
-Method 2 is more reliable for A/B/C comparisons since it doesn't depend on server file ordering. The frame template CSS won't apply, but the mockup will render.
+The brainstorm server serves only the **newest file**. For A/B/C comparisons, use the `screenshot-mockup.sh` helper which wraps each HTML fragment in the frame template and screenshots it independently:
+```bash
+scripts/screenshot-mockup.sh <screen_dir>/option-a.html /tmp/design-previews/option-a.png
+scripts/screenshot-mockup.sh <screen_dir>/option-b.html /tmp/design-previews/option-b.png
+scripts/screenshot-mockup.sh <screen_dir>/option-c.html /tmp/design-previews/option-c.png
+```
+This is the ONLY reliable way to screenshot multiple options. Never rely on the server for multi-option screenshots.
 
 ### Screenshot Tool
 ```bash
