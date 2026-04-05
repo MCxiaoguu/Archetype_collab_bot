@@ -86,19 +86,71 @@ When told "run ralph on <feature>":
 3. Post progress to Ralph topic after each iteration
 4. Stop when all stories pass or max iterations reached
 
-## Design Preview via Telegram (Superpowers Integration)
+## Visual Companion via Telegram (ALWAYS CONSIDER)
 
-The superpowers brainstorming skill has been modified for Telegram mode:
-- Instead of opening a browser, mockups are **screenshotted and sent as photos** to the 🎨 Design topic
-- The skill auto-generates HTML mockups → screenshots them via Puppeteer → sends via Telegram `reply` tool with `files` parameter
-- Users give feedback by replying in the Design topic
-- Preview images have a **1-hour TTL** (auto-cleaned by cron)
+**For EVERY feature request that touches frontend or UI**, you MUST consider whether visual previews would help the cofounder make decisions. Ask via Telegram before proceeding:
+
+> "This involves UI changes. Want me to generate visual mockups for you to review here in Telegram before I implement?"
+
+If they say yes (or the request is inherently visual — layout, styling, component design), invoke the superpowers brainstorming skill with the visual companion. The skill has been adapted for Telegram mode.
+
+### How the Visual Companion Works in Telegram Mode
+
+1. **Start the brainstorm server**:
+   ```bash
+   skills/brainstorming/scripts/start-server.sh --project-dir /home/archetype/archetype-project
+   ```
+   Save the `port`, `screen_dir`, and `state_dir` from the response.
+
+2. **Write HTML mockup** to `screen_dir` (content fragment — server wraps it in frame template with CSS):
+   ```bash
+   # Write to screen_dir/layout.html using Write tool
+   ```
+
+3. **Screenshot it**:
+   ```bash
+   node scripts/screenshot.js http://localhost:<PORT> /tmp/design-previews/preview-$(date +%s).png
+   ```
+
+4. **Send to Telegram 🎨 Design topic** via `reply` tool with `files` parameter:
+   ```
+   reply(chat_id="-1003216362334", text="🎨 <question>", files=["/path/to/screenshot.png"], reply_to=<message_id>)
+   ```
+
+5. **Wait for cofounder feedback** in Telegram, iterate until approved.
+
+6. **Stop server** when done:
+   ```bash
+   skills/brainstorming/scripts/stop-server.sh <session_dir>
+   ```
+
+### When to Use Visual Companion
+- Layout changes → YES, show mockup options
+- New component/page → YES, show wireframes
+- Color/theme/styling → YES, show before/after
+- Backend-only changes → NO, text report is fine
+- Bug fixes → Usually NO, unless it's a visual bug (then screenshot before/after)
+
+### Design Iteration Loop via Telegram
+1. Generate 2-3 options as separate HTML mockups
+2. Screenshot each one
+3. Send all to 🎨 Design topic with labels (Option A, B, C)
+4. Wait for cofounder reply
+5. Implement chosen option
+6. Screenshot final result from live dev server (http://localhost:5173)
+7. Send final screenshot for confirmation
+
+### Available CSS Classes (Content Fragments)
+The brainstorm server frame template provides: `.options`, `.option`, `.cards`, `.card`, `.mockup`, `.split`, `.pros-cons`, `.mock-nav`, `.mock-sidebar`, `.mock-button`, `.mock-input`, `.placeholder`
+
+### Image TTL
+Preview images in `/tmp/design-previews/` are auto-deleted after **1 hour** by cron.
 
 ### Screenshot Tool
 ```bash
-node scripts/screenshot.js <url_or_html_file> [output_path]
-# Example: screenshot the live dev server
-node scripts/screenshot.js http://localhost:5173 /tmp/design-previews/preview.png
+node scripts/screenshot.js <url_or_file> [output_path]
 ```
-
-When a cofounder asks for a design change, use the superpowers brainstorming skill — it will handle the visual companion flow through Telegram automatically.
+- Screenshots the live dev server: `http://localhost:5173`
+- Screenshots a brainstorm mockup: `http://localhost:<BRAINSTORM_PORT>`
+- Screenshots an HTML file directly: `/path/to/file.html`
+- Output: 1280x900 PNG
