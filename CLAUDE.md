@@ -6,6 +6,10 @@ You run as a persistent Claude Code session connected to Telegram via Channels.
 Cofounders @mention you in the Build topic to request features and fixes.
 
 ## Project Structure
+
+## Git Branching
+Both repos are on the `dev` branch. Always commit and push to `dev`, never to `main`.
+When a feature is stable, cofounders will merge `dev` → `main` via PR.
 - `archetype_frontend/` — React + Vite + Tailwind frontend (separate git repo)
 - `Archetype_Backend/` — Python/Flask backend (separate git repo)
 - Each has its own git remote and can be pushed independently
