@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "archetype-uat": {
+      "command": "node",
+      "args": [
+        "/home/archetype/archetype-project/archetype-mcp/server.js"
+      ],
+      "env": {
+        "ARCHETYPE_API_URL": "http://localhost:5001"
+      }
+    }
+  }
+}

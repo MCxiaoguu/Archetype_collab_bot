@@ -215,3 +215,40 @@ Tags: `build-log`, `design-update`, `test-report`, `general`
 
 ### What Happens on the Other Side
 OpenClaw checks `~/.openclaw/bridge-inbox/` during its heartbeat cycle. Messages tagged `build-log` get appended to the Obsidian vault. The bridge is one-way (archetype → openclaw).
+
+## Archetype UAT MCP Server
+
+An MCP server is registered that exposes the UAT pipeline as tools. Use these tools directly in the test-centric loop and Ralph iterations.
+
+### Available MCP Tools
+
+| Tool | What it does |
+|------|-------------|
+| `list_uat_tests` | List all UAT tests |
+| `create_uat_test` | Create test with cases, steps, expected results |
+| `get_uat_test` | Get full test details |
+| `run_uat_test` | Execute test via Notte browser automation |
+| `get_uat_status` | Check execution progress |
+| `get_uat_results` | **Verbose** — per-case pass/fail, per-step logs with errors, actual vs expected, defects |
+| `wait_uat_completion` | Long-poll until done (up to 5 min), returns full results |
+| `delete_uat_test` | Soft-delete a test |
+| `bootstrap_uat_test` | Generate test cases from natural language description |
+
+### Integration with Test-Centric Loop
+
+In Step 4 (UAT Verification), use the MCP tools instead of manually running scripts:
+1. `create_uat_test` — create the test against `http://localhost:5173`
+2. `run_uat_test` — execute it
+3. `wait_uat_completion` — wait for results
+4. Parse the verbose results to determine pass/fail per step
+5. Screenshot the dev server for visual confirmation
+6. Report results to Telegram
+
+### Integration with Ralph Loop
+
+During Ralph iterations, UAT runs automatically:
+1. After implementation passes unit tests, create a UAT test for the feature
+2. Run it and wait for completion
+3. If any steps fail, feed the failure details back to the Implementation Agent
+4. Re-iterate until UAT passes
+5. Only mark the story as complete when both unit tests AND UAT pass
