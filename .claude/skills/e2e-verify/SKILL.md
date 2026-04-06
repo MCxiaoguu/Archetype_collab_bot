@@ -1,13 +1,13 @@
 ---
-name: smoke-test
+name: e2e-verify
 description: >
-  Run a smoke test on the Archetype app after any implementation. Automatically creates and
+  Run a e2e verification on the Archetype app after any implementation. Automatically creates and
   executes a UAT test that verifies core flows still work: login, dashboard, navigation, and
   the UAT testing feature itself. Use after completing any /build or Ralph iteration, or when
-  user says "smoke test", "run smoke", or /smoke.
+  user says "e2e verify", "run e2e", or /e2e.
 ---
 
-# Smoke Test — Post-Implementation Verification
+# End-to-End Verify — Post-Implementation Verification
 
 Run after every implementation to catch regressions. Uses the Archetype UAT MCP to exercise
 core app flows via real browser automation.
@@ -17,7 +17,7 @@ core app flows via real browser automation.
 You MUST run this skill automatically after:
 - Every `/build` implementation completes (after unit tests pass)
 - Every Ralph iteration that touches frontend code
-- Whenever a cofounder says "smoke test", "run smoke", or `/smoke`
+- Whenever a cofounder says "e2e verification", "run smoke", or `/smoke`
 
 ## Credentials
 
@@ -124,5 +124,5 @@ Defects: DEF-001 [high] Navigation menu not rendering after auth redirect
 Include which specific step failed and the error so the Implementation Agent can fix it.
 
 ### After reporting:
-- If failures involve code the bot just changed → automatically enter a fix iteration (re-read the failure, fix the code, re-run smoke test)
+- If failures involve code the bot just changed → automatically enter a fix iteration (re-read the failure, fix the code, re-run e2e verification)
 - If failures are in unrelated areas → report and wait for cofounder instructions

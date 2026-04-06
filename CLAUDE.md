@@ -49,10 +49,10 @@ Subagent prompt: "You are the Implementation Agent. Read the failing tests. Writ
 Use Archetype's UAT runner (exps/services/uat/) with Notte browser sessions.
 Capture screenshots → send to Design topic via reply tool files parameter.
 
-### Step 4b: Smoke Test (AUTOMATIC after frontend changes)
-After implementation passes unit tests and before reporting, invoke the smoke-test skill.
-If smoke test fails on code you just changed, fix it and re-run before reporting.
-If smoke test fails on unrelated code, report the failure but don't block the feature.
+### Step 4b: E2E Verify (AUTOMATIC after frontend changes)
+After implementation passes unit tests and before reporting, invoke the e2e-verify skill.
+If e2e verification fails on code you just changed, fix it and re-run before reporting.
+If e2e verification fails on unrelated code, report the failure but don't block the feature.
 
 ### Step 5: Report & Push
 Post results to Build topic (edit the ⏳ message).
@@ -185,7 +185,7 @@ Telegram users can type `/` to see a command menu. When you receive a message st
 | `/ralph <feature>` | Start the Ralph autonomous build loop on the described feature. |
 | `/design <description>` | Start a design brainstorm with visual companion. Generate mockups and send screenshots. |
 | `/audit <endpoint description>` | **Invoke the `/audit` skill.** Deep vertical code review — trace the full call tree from route handler to DB calls. Checks for bugs, dead code, redundancy, and canonical assignment violations. The user can describe the endpoint in natural language (e.g., "/audit user profile endpoint" or "/audit POST persona generate"). |
-| `/smoke` | **Invoke the smoke-test skill.** Runs 3 UAT cases (login, navigation, UAT flow) against the live dev server. Auto-triggered after every `/build` and Ralph iteration. |
+| `/e2e` | **Invoke the e2e-verify skill.** Runs 3 UAT cases (login, navigation, UAT flow) against the live dev server. Auto-triggered after every `/build` and Ralph iteration. |
 | `/notify <message>` | Send a message to the OpenClaw bot via the file bridge. Runs `scripts/bridge-send.sh "<message>" "<tag>"`. Auto-detect the tag from context (build-log for build completions, design-update for design work, general otherwise). Confirm to the user in Telegram that the message was sent. |
 | `/diff` | Run `git log --oneline -10` and `git diff --stat` on both repos (dev branch), post summary. |
 | `/deploy` | Report dev server status: check if frontend (port 5173) and backend (port 5001) are responding, show URL. |
