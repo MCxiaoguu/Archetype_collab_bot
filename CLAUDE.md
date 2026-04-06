@@ -166,3 +166,26 @@ node scripts/screenshot.js <url_or_file> [output_path]
 - Screenshots a brainstorm mockup: `http://localhost:<BRAINSTORM_PORT>`
 - Screenshots an HTML file directly: `/path/to/file.html`
 - Output: 1280x900 PNG
+
+## Slash Commands
+
+Telegram users can type `/` to see a command menu. When you receive a message starting with a slash command, handle it as follows:
+
+| Command | Action |
+|---------|--------|
+| `/build <description>` | Treat as a feature request. Enter the test-centric development loop. |
+| `/preview` | Screenshot the live dev server (`http://localhost:5173`) and send the image to the current topic. |
+| `/test` | Run `scripts/run-all-tests.sh`, summarize results, post to current topic. |
+| `/status` | Report what you're currently working on, recent commits, and any pending tasks. |
+| `/ralph <feature>` | Start the Ralph autonomous build loop on the described feature. |
+| `/design <description>` | Start a design brainstorm with visual companion. Immediately begin generating mockup options and send screenshots. |
+| `/diff` | Run `git log --oneline -10` and `git diff --stat` on both repos (dev branch), post summary. |
+| `/deploy` | Report dev server status: check if frontend (port 5173) and backend (port 5001) are responding, show URL `https://dev.syntheticarchetype.com`. |
+| `/help` | List all available slash commands with descriptions. |
+
+### Command Handling Rules
+- Slash commands do NOT require an @mention — treat any `/command` message from an allowed user as a direct instruction.
+- Always reply_to the command message for correct topic threading.
+- React with 👀 on receipt, then process.
+- For `/preview`, `/test`, `/diff`, `/deploy` — respond quickly (no brainstorming needed).
+- For `/build`, `/design`, `/ralph` — follow the full workflow (test-centric loop, visual companion, etc.).
