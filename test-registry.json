@@ -1,5 +1,100 @@
 {
-  "last_updated": "2026-04-05T22:00:00Z",
-  "suites": {},
+  "last_updated": "2026-04-05T00:03:00Z",
+  "suites": {
+    "dev-banner-unit": {
+      "file": "archetype_frontend/src/__tests__/DevBanner.test.tsx",
+      "scope": "DevBanner component",
+      "status": "failing — component not yet implemented",
+      "tests": [
+        {
+          "name": "renders the DEV SERVER label",
+          "type": "unit",
+          "criteria": "Text 'DEV SERVER' is present in the DOM when import.meta.env.DEV is true"
+        },
+        {
+          "name": "renders the dev URL dev.syntheticarchetype.com",
+          "type": "unit",
+          "criteria": "Text 'dev.syntheticarchetype.com' is present in the DOM"
+        },
+        {
+          "name": "renders the branch name 'dev'",
+          "type": "unit",
+          "criteria": "Text matching /branch:\\s*dev/i is present in the DOM"
+        },
+        {
+          "name": "renders when import.meta.env.DEV is true",
+          "type": "unit",
+          "criteria": "Component mounts and exposes an aria banner when DEV=true"
+        },
+        {
+          "name": "renders when VITE_SHOW_DEV_BANNER is 'true' even if DEV is false",
+          "type": "unit",
+          "criteria": "Component mounts when VITE_SHOW_DEV_BANNER='true' regardless of DEV flag"
+        },
+        {
+          "name": "returns null when DEV is false and VITE_SHOW_DEV_BANNER is not set",
+          "type": "unit",
+          "criteria": "container.firstChild is null — component renders nothing"
+        },
+        {
+          "name": "returns null when DEV is false and VITE_SHOW_DEV_BANNER is 'false'",
+          "type": "unit",
+          "criteria": "container.firstChild is null — explicit false flag suppresses render"
+        },
+        {
+          "name": "has fixed bottom positioning (pinned to bottom of viewport)",
+          "type": "unit",
+          "criteria": "Root element has Tailwind classes 'fixed' and 'bottom-0'"
+        },
+        {
+          "name": "spans the full viewport width",
+          "type": "unit",
+          "criteria": "Root element has Tailwind class 'w-full'"
+        },
+        {
+          "name": "has an amber background colour",
+          "type": "unit",
+          "criteria": "Root element className matches /bg-amber-/"
+        },
+        {
+          "name": "is 28px tall via explicit height class or inline style",
+          "type": "unit",
+          "criteria": "Root element has class 'h-7' (28px Tailwind) OR inline style height:28px"
+        }
+      ]
+    },
+    "dev-banner-integration": {
+      "file": "archetype_frontend/src/__tests__/DevBanner.integration.test.tsx",
+      "scope": "DevBanner in WorkspaceShell and App render trees",
+      "status": "failing — component not yet implemented",
+      "tests": [
+        {
+          "name": "renders DevBanner inside the WorkspaceShell layout when DEV is true",
+          "type": "integration",
+          "criteria": "Mounting WorkspaceShell with DEV=true results in DEV SERVER text visible"
+        },
+        {
+          "name": "DevBanner is absent in WorkspaceShell when DEV is false",
+          "type": "integration",
+          "criteria": "Mounting WorkspaceShell with DEV=false results in no DEV SERVER text"
+        },
+        {
+          "name": "renders DevBanner on the homepage route when DEV is true",
+          "type": "integration",
+          "criteria": "Mounting App at '/' with DEV=true results in DEV SERVER text visible"
+        },
+        {
+          "name": "DevBanner is absent on homepage when DEV is false",
+          "type": "integration",
+          "criteria": "Mounting App at '/' with DEV=false results in no DEV SERVER text"
+        },
+        {
+          "name": "renders with the full expected text in one element or nearby siblings",
+          "type": "integration",
+          "criteria": "All three strings — DEV SERVER, dev.syntheticarchetype.com, branch: dev — present in DOM"
+        }
+      ]
+    }
+  },
   "coverage_gaps": ["initial scan not yet run"]
 }
