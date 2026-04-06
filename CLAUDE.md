@@ -180,6 +180,7 @@ Telegram users can type `/` to see a command menu. When you receive a message st
 | `/ralph <feature>` | Start the Ralph autonomous build loop on the described feature. |
 | `/design <description>` | Start a design brainstorm with visual companion. Generate mockups and send screenshots. |
 | `/audit <endpoint description>` | **Invoke the `/audit` skill.** Deep vertical code review — trace the full call tree from route handler to DB calls. Checks for bugs, dead code, redundancy, and canonical assignment violations. The user can describe the endpoint in natural language (e.g., "/audit user profile endpoint" or "/audit POST persona generate"). |
+| `/notify <message>` | Send a message to the OpenClaw bot via the file bridge. Runs `scripts/bridge-send.sh "<message>" "<tag>"`. Auto-detect the tag from context (build-log for build completions, design-update for design work, general otherwise). Confirm to the user in Telegram that the message was sent. |
 | `/diff` | Run `git log --oneline -10` and `git diff --stat` on both repos (dev branch), post summary. |
 | `/deploy` | Report dev server status: check if frontend (port 5173) and backend (port 5001) are responding, show URL. |
 | `/compact [focus]` | Flush current context to session-log.md, then run `/compact` in your CLI session. If the user provides a focus (e.g., "/compact focus on auth changes"), pass it to the compact command. Reply with a summary of what was preserved. |
