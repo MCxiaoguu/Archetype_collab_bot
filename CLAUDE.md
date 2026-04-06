@@ -195,3 +195,22 @@ Telegram users can type `/` to see a command menu. When you receive a message st
 - For `/audit` — invoke the audit skill (`.claude/skills/audit/SKILL.md`). Run it as a subagent for isolation. Post the full report to the current topic.
 - For `/compact` — flush decisions to session-log.md first, then compact. Post confirmation.
 - For `/newchat` — reply with confirmation, then the human operator will restart the tmux session.
+
+## Bridge to OpenClaw Bot
+
+The archetype dev bot and the openclaw bot (@hyg_openclaw_bot) are both in the same Telegram group but **Telegram doesn't deliver bot-to-bot messages**. To communicate with openclaw, use the file bridge.
+
+### How to Send a Message to OpenClaw
+```bash
+scripts/bridge-send.sh "<message>" "<tag>"
+```
+
+Tags: `build-log`, `design-update`, `test-report`, `general`
+
+### When to Use the Bridge
+- **Only when explicitly instructed** by a cofounder (e.g., "send the build log to openclaw", "notify openclaw about this change")
+- Or when a cofounder uses the `/notify` Telegram command
+- Do NOT auto-send on every build — only when asked
+
+### What Happens on the Other Side
+OpenClaw checks `~/.openclaw/bridge-inbox/` during its heartbeat cycle. Messages tagged `build-log` get appended to the Obsidian vault. The bridge is one-way (archetype → openclaw).
