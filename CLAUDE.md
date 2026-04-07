@@ -14,17 +14,124 @@ When a feature is stable, cofounders will merge `dev` → `main` via PR.
 - `Archetype_Backend/` — Python/Flask backend (separate git repo)
 - Each has its own git remote and can be pushed independently
 
-## Message Handling
+## Message Handling — Parallel Dispatch Model
+
+**You are a dispatcher, not a worker.** When a task arrives, acknowledge it immediately
+and dispatch a subagent to handle the work. Then return to waiting for the next message.
+This allows multiple tasks to run in parallel.
 
 **CRITICAL: Topic Threading**
-When replying to group messages, ALWAYS use the `reply_to` parameter with the original message_id. This ensures replies appear in the correct topic thread. Without `reply_to`, Telegram sends replies to the General topic.
+When replying to group messages, ALWAYS use the `reply_to` parameter with the original message_id.
+Without `reply_to`, Telegram sends replies to the General topic.
 
-1. React with 👀 on every inbound message
-2. Reply "⏳ Working on: <summary>..." (with reply_to)
-3. Route through the test-centric loop (see below)
-4. Edit your message: "⏳" → "✅ <result summary>"
-5. Attribute the sender in session-log.md: "[name]: requested X"
-6. After implementation, push changes to GitHub
+### Inbound Message Flow
+
+1. **React** with 👀 on every inbound message
+2. **Acknowledge** — Reply "⏳ Working on: <summary>..." (with reply_to). Save the sent message_id.
+3. **Track** — Update task-tracker.json: add entry to "active" with task summary, message_id, timestamp, sender
+4. **Dispatch** — Spawn a background subagent (via Agent/Task tool) with:
+   - The full feature request / command
+   - The chat_id and message_id for Telegram replies
+   - Instructions to follow the test-centric loop
+   - Access to all MCP tools (archetype-uat, mongodb-mcp, notte-docs)
+5. **Return immediately** — Do NOT wait for the subagent. Be ready for the next message.
+6. **On subagent completion** — The subagent posts results to Telegram directly.
+   You then update task-tracker.json: move from "active" to "completed".
+
+### Subagent Prompt Template
+
+When dispatching a subagent for a build/feature task, use this prompt structure:
+
+```
+You are a Build Agent working on the Archetype project.
+
+Task: <the feature request>
+Requested by: <sender name>
+Telegram chat_id: <chat_id>
+Telegram reply_to: <original message_id>
+Ack message_id: <the ⏳ message you sent>
+
+Working directory: ~/archetype-project
+Backend: ~/archetype-project/Archetype_Backend (dev branch)
+Frontend: ~/archetype-project/archetype_frontend (dev branch)
+
+Credentials for testing: demo@syntheticarchetype.com / DEMO-archetype
+Dev server: https://dev.syntheticarchetype.com
+
+Instructions:
+1. Follow the test-centric development loop (impact analysis → tests → implementation)
+2. Run e2e verification after frontend changes
+3. Commit and push to dev branch
+4. When done, use the reply tool to post results to Telegram (chat_id, reply_to)
+5. Edit the ⏳ message (ack message_id) to show ✅ result summary
+6. Post test summary to the Tests topic if tests were written
+```
+
+### What Gets Dispatched vs Handled Inline
+
+**Dispatch as subagent** (takes >30 seconds):
+- `/build` — feature implementation
+- `/ralph` — autonomous build loop
+- `/design` — design brainstorm with visual mockups
+- `/audit` — deep endpoint code review
+- `/e2e` — end-to-end verification
+
+**Handle inline** (quick responses, <10 seconds):
+- `/preview` — screenshot and send
+- `/test` — run tests and report
+- `/status` — report current state
+- `/tasks` — show task tracker
+- `/diff` — git log summary
+- `/deploy` — server status check
+- `/compact` — context management
+- `/notify` — bridge message
+- `/help` — command list
+- `/newchat` — restart confirmation
+
+### Task Tracker (task-tracker.json)
+
+Persistent file tracking active and completed tasks. Updated by the orchestrator (you).
+
+```json
+{
+  "active": [
+    {
+      "id": "task-1712345678",
+      "summary": "Add dark mode toggle",
+      "sender": "alice",
+      "chatId": "-1003216362334",
+      "messageId": "42",
+      "ackMessageId": "43",
+      "startedAt": "2026-04-07T10:00:00Z"
+    }
+  ],
+  "completed": [
+    {
+      "id": "task-1712345000",
+      "summary": "Fix login redirect",
+      "sender": "bob",
+      "status": "success",
+      "completedAt": "2026-04-07T09:30:00Z",
+      "result": "3 tests added, all passing"
+    }
+  ],
+  "maxCompleted": 20
+}
+```
+
+### /tasks Response Format
+
+When a user sends `/tasks`, read task-tracker.json and reply:
+
+```
+📋 Active Tasks:
+⏳ [task-1712345678] "Add dark mode toggle" — requested by alice (2 min ago)
+⏳ [task-1712345679] "Audit persona endpoint" — requested by bob (30 sec ago)
+
+✅ Recent Completed:
+✅ "Fix login redirect" — bob — success (10 min ago)
+❌ "Add export CSV" — alice — failed: test regression (1 hr ago)
+```
 
 ## Test-Centric Development Loop (MANDATORY)
 Every change goes through this loop. No exceptions.
@@ -187,6 +294,7 @@ Telegram users can type `/` to see a command menu. When you receive a message st
 | `/audit <endpoint description>` | **Invoke the `/audit` skill.** Deep vertical code review — trace the full call tree from route handler to DB calls. Checks for bugs, dead code, redundancy, and canonical assignment violations. The user can describe the endpoint in natural language (e.g., "/audit user profile endpoint" or "/audit POST persona generate"). |
 | `/e2e` | **Invoke the e2e-verify skill.** Runs 3 UAT cases (login, navigation, UAT flow) against the live dev server. Auto-triggered after every `/build` and Ralph iteration. |
 | `/notify <message>` | Send a message to the OpenClaw bot via the file bridge. Runs `scripts/bridge-send.sh "<message>" "<tag>"`. Auto-detect the tag from context (build-log for build completions, design-update for design work, general otherwise). Confirm to the user in Telegram that the message was sent. |
+| `/screenshot <target>` | **Invoke the dev-screenshot skill.** Capture an authenticated screenshot of the live workspace. Target can be a page name (e.g., "test hub", "dashboard", "feature hub") or a specific test ID. Sends the screenshot to the current topic. |
 | `/diff` | Run `git log --oneline -10` and `git diff --stat` on both repos (dev branch), post summary. |
 | `/deploy` | Report dev server status: check if frontend (port 5173) and backend (port 5001) are responding, show URL. |
 | `/compact [focus]` | Flush current context to session-log.md, then run `/compact` in your CLI session. If the user provides a focus (e.g., "/compact focus on auth changes"), pass it to the compact command. Reply with a summary of what was preserved. |
