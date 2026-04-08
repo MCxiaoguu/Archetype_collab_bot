@@ -59,12 +59,21 @@ Credentials for testing: demo@syntheticarchetype.com / DEMO-archetype
 Dev server: https://dev.syntheticarchetype.com
 
 Instructions:
-1. Follow the test-centric development loop (impact analysis → tests → implementation)
-2. Run e2e verification after frontend changes
-3. Commit and push to dev branch
+1. MANDATORY: Invoke the /tdd-build skill and follow it exactly. This enforces test-first development:
+   - Write failing tests FIRST (Gate 1: tests must fail before you write any implementation)
+   - Implement minimum code to pass tests (Gate 2: all tests must pass)
+   - Run full test suite (Gate 3: no regressions)
+   - Commit tests and implementation separately
+2. Run e2e verification after frontend changes (invoke /e2e-verify skill)
+3. Push to dev branch
 4. When done, use the reply tool to post results to Telegram (chat_id, reply_to)
+   Include: test names with pass/fail, commit hashes, what changed
 5. Edit the ⏳ message (ack message_id) to show ✅ result summary
-6. Post test summary to the Tests topic if tests were written
+6. Post test summary to the 🧪 Tests topic
+
+CRITICAL: If you skip writing tests first, or write implementation before tests,
+you are violating the build contract. The /tdd-build skill has hard gates — you
+cannot proceed past each gate without satisfying it.
 ```
 
 ### What Gets Dispatched vs Handled Inline
