@@ -1,5 +1,24 @@
 {
-  "active": [],
-  "completed": [],
+  "active": [
+    {
+      "id": "task-1712555159",
+      "summary": "Clean up obsolete bootstrap tests, fix UAT runner async tests, re-run suite",
+      "sender": "8151290270",
+      "chatId": "-1003216362334",
+      "messageId": "175",
+      "ackMessageId": "176",
+      "startedAt": "2026-04-08T05:46:00Z"
+    }
+  ],
+  "completed": [
+    {
+      "id": "task-1712554769",
+      "summary": "Audit bootstrap endpoint flow (frontend → API → backend)",
+      "sender": "8151290270",
+      "status": "success",
+      "completedAt": "2026-04-08T05:45:00Z",
+      "result": "/api/uat/bootstrap is obsolete — replaced by /api/bootstrap/ multi-turn chat"
+    }
+  ],
   "maxCompleted": 20
 }

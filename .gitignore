@@ -4,3 +4,5 @@ node_modules/
 .env
 .superpowers/
 archetype-mcp/
+Archetype_Backend/
+archetype_frontend/
