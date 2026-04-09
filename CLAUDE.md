@@ -44,6 +44,7 @@ When dispatching a subagent for a build/feature task, use this prompt structure:
 
 ```
 You are a Build Agent working on the Archetype project.
+Model: You MUST use claude-opus-4-6. Never fall back to Sonnet or any other model.
 
 Task: <the feature request>
 Requested by: <sender name>
@@ -154,11 +155,11 @@ Every change goes through this loop. No exceptions.
   - Utility → unit test (in/out)
   - Full flow → UAT via Notte runner
 
-### Step 2: Test Guardian (spawn as subagent, Sonnet)
+### Step 2: Test Guardian (spawn as subagent, Opus)
 Subagent prompt: "You are the Test Guardian. Read the feature request and impact analysis. Find existing test patterns in the codebase. Write NEW FAILING tests that define acceptance criteria. Tests must FAIL for the right reason. Commit: test(<scope>): <desc>. NEVER write implementation code."
 - After: update test-registry.json with new entries
 
-### Step 3: Implementation (spawn as subagent, Sonnet)
+### Step 3: Implementation (spawn as subagent, Opus)
 Subagent prompt: "You are the Implementation Agent. Read the failing tests. Write minimum code to pass ALL tests. Run tests after every change. Run FULL suite to catch regressions. Commit: feat(<scope>): <desc>."
 
 ### Step 4: UAT Verification (if frontend-touching)
