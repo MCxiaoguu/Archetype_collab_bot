@@ -1,5 +1,5 @@
-# Route Audit Run Log
+# Route audit run log
 
-Most recent first. Each line: date — open findings / suppressed / PRs opened.
+Most recent first.
 
-<!-- entries prepended by the routine -->
+- **2026-04-21** — 42 open, 0 suppressed
