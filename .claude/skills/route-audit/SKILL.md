@@ -1,29 +1,31 @@
 ---
 name: route-audit
-description: Use when auditing the Archetype backend + frontend for redundant endpoints, dead code, deprecation markers, cross-layer field drift, or handler placement issues. Runs as a scheduled Claude Code routine each morning and as an API-triggered fix run on approval. Also use when the routine's `text` payload starts with "apply ..." to implement approved findings TDD-style.
+description: Use when auditing the Archetype backend + frontend for redundant endpoints, dead code, deprecation markers, cross-layer field drift, or handler placement issues. Runs from VM cron at 9am in audit mode; runs from the orchestrator on Telegram approval in fix mode. Also use when the caller's prompt says to apply approved findings TDD-style.
 ---
 
 # Route Audit Routine
 
-This skill is executed by a Claude Code routine (Anthropic-cloud-managed). See `DESIGN.md` in this directory for the full design notes.
+This skill runs on the Archetype VM via `claude -p` subprocess (not in Anthropic cloud). See `DESIGN.md` in this directory for the full design notes.
 
 ## Mode selection
 
-The routine prompt passes a `text` payload. Decide the mode:
+The caller passes an intent in the prompt. Decide the mode:
 
-- **`text` empty** → audit mode
-- **`text` starts with `apply `** → fix mode (format: `apply YYYY-MM-DD #N [#M ...]`)
-- **`text` starts with `mute `** → reserved; not implemented yet, noop with a Telegram ack
+- **caller says "audit mode" or payload is empty** → audit mode
+- **caller says "fix mode" with a payload like `apply YYYY-MM-DD #N [#M ...]`** → fix mode
+- **caller says "mute"** → reserved; not implemented yet, noop with a Telegram ack
 
 Always run `git config user.email "routines@archetype.bot"` and `git config user.name "route-audit"` once at the start so commits are attributed.
 
-## Repositories the routine clones
+## Repositories (VM layout)
 
-Expect these three roots at session start (paths relative to the routine's clone root):
+The VM has a single working tree at `/home/archetype/archetype-project/` which is the `Archetype_collab_bot` repo; Backend and Frontend are git repositories nested inside as subdirectories.
 
-- `Archetype_collab_bot/` — this skill, the audit log (on `claude/route-audit-log` branch)
-- `Archetype_Backend/` — backend source, tests in `_tests/`
-- `Archetype_Frontend/` — frontend source, tests in the component dirs or `src/__tests__`
+- `/home/archetype/archetype-project/` — `Archetype_collab_bot` (cwd; this skill lives here, log branch lives here)
+- `/home/archetype/archetype-project/Archetype_Backend/` — backend repo, tests in `_tests/`
+- `/home/archetype/archetype-project/archetype_frontend/` — frontend repo (path on disk is lowercase; the GitHub remote is `MCxiaoguu/Archetype_Frontend`), tests in component dirs or `src/__tests__`
+
+Before doing anything else, `cd /home/archetype/archetype-project` and verify all three directories exist; abort with a readable error if any are missing.
 
 ## Environment variables expected
 
@@ -36,19 +38,26 @@ If either is missing, abort with a readable error in the session log; do not con
 
 ## Audit mode
 
-### 1. Hydrate the log state
+### 1. Hydrate the log state (via a throwaway worktree — keeps cwd's main checkout untouched)
+
 ```bash
-cd Archetype_collab_bot
+cd /home/archetype/archetype-project     # Archetype_collab_bot
+WORKTREE=/tmp/route-audit-log
+
 git fetch origin claude/route-audit-log 2>/dev/null || true
-# Create the branch locally if it doesn't exist yet
+rm -rf "$WORKTREE"
 if git show-ref --verify --quiet refs/remotes/origin/claude/route-audit-log; then
-  git checkout -B claude/route-audit-log origin/claude/route-audit-log
+  git worktree add "$WORKTREE" origin/claude/route-audit-log
+  (cd "$WORKTREE" && git switch -C claude/route-audit-log --track origin/claude/route-audit-log 2>/dev/null \
+                 || git switch claude/route-audit-log)
 else
-  git checkout -B claude/route-audit-log
-  mkdir -p docs/audits/runs
-  [ -f docs/audits/state.json ] || echo '{"findings":{},"last_run":null}' > docs/audits/state.json
-  [ -f docs/audits/INDEX.md ] || echo "# Route audit run log\n\nMost recent first.\n" > docs/audits/INDEX.md
+  git worktree add -b claude/route-audit-log "$WORKTREE"
+  mkdir -p "$WORKTREE/docs/audits/runs"
+  [ -f "$WORKTREE/docs/audits/state.json" ] || echo '{"findings":{},"last_run":null,"_schema":"route-audit/1"}' > "$WORKTREE/docs/audits/state.json"
+  [ -f "$WORKTREE/docs/audits/INDEX.md" ]   || printf "# Route audit run log\n\nMost recent first.\n\n" > "$WORKTREE/docs/audits/INDEX.md"
 fi
+
+# All audit writes go into $WORKTREE/docs/audits/. The cwd checkout (main) is never touched.
 ```
 
 ### 2. Walk the checklist
@@ -83,7 +92,7 @@ Build a numbered message, one block per surviving finding:
 
 ```
 🔎 Route audit 2026-04-20
-Backend: Archetype_Backend@<short-sha>  Frontend: Archetype_Frontend@<short-sha>
+Backend: Archetype_Backend@<short-sha>  Frontend: archetype_frontend@<short-sha>
 Suppressed: <N> (stale/skipped); Open: <M>
 
 #1 [redundant-endpoint] Archetype_Backend/app/routes/test.py:142
@@ -92,7 +101,7 @@ fp: 9ac3f2e10db481c7
 
 #2 [field-dup] test_id vs testId vs id
 Backend route uses test_id (snake_case); frontend hook uses testId; DB doc stores id. No single source of truth.
-Spans: Archetype_Backend/app/routes/test.py, Archetype_Frontend/src/hooks/useTest.ts
+Spans: Archetype_Backend/app/routes/test.py, archetype_frontend/src/hooks/useTest.ts
 fp: 1f8bde4497a07c33
 ...
 
@@ -114,16 +123,19 @@ If the body exceeds 4000 chars, split into multiple `sendMessage` calls; if it e
 
 Write `docs/audits/runs/2026-04-20.md` with the full finding table (including suppressed ones, with a `suppressed: yes (reason)` column for transparency). Update `docs/audits/state.json` — for each fingerprint: bump `last_seen`; new fingerprints get `status: "open"`, `first_seen: today`. Prepend a one-line entry to `docs/audits/INDEX.md`.
 
-Commit and push:
+Commit and push from the worktree (not the main checkout):
 
 ```bash
-cd Archetype_collab_bot
-git add docs/audits/
-git commit -m "audit: 2026-04-20 (open=${M}, suppressed=${N})"
-git push origin claude/route-audit-log
+(cd "$WORKTREE" && \
+  git add docs/audits/ && \
+  git commit -m "audit: $(date +%F) (open=${M}, suppressed=${N})" && \
+  git push origin claude/route-audit-log)
+
+# Clean up the worktree so future runs start fresh
+git worktree remove --force "$WORKTREE" 2>/dev/null || rm -rf "$WORKTREE"
 ```
 
-No PR. Log branch only.
+No PR. Log branch only — `main` is never touched by the audit.
 
 ---
 
@@ -134,12 +146,15 @@ No PR. Log branch only.
 Parse `text`: expect `apply YYYY-MM-DD #<N>[ #<M>...]`. Date = audit run identifier. Numbers = 1-based indexes from that day's Telegram post (and that day's `runs/YYYY-MM-DD.md` table).
 
 ```bash
-cd Archetype_collab_bot
+cd /home/archetype/archetype-project
+WORKTREE=/tmp/route-audit-log
 git fetch origin claude/route-audit-log
-git checkout claude/route-audit-log
+rm -rf "$WORKTREE"
+git worktree add "$WORKTREE" origin/claude/route-audit-log
+(cd "$WORKTREE" && git switch -C claude/route-audit-log --track origin/claude/route-audit-log)
 ```
 
-Load `docs/audits/runs/YYYY-MM-DD.md`. Map each approved number to a finding row (category, fingerprint, path, title, detail, spans).
+Load `$WORKTREE/docs/audits/runs/YYYY-MM-DD.md`. Map each approved number to a finding row (category, fingerprint, path, title, detail, spans).
 
 ### 2. TDD per-finding
 
@@ -166,15 +181,15 @@ For each approved finding (in order), do exactly this. If any step fails, record
 
 ### 3. Open PRs
 
-For each repo that received at least one successful fix commit:
+For each affected repo (Backend at `./Archetype_Backend`, Frontend at `./archetype_frontend`) that received at least one successful fix commit:
 
 ```bash
-cd <repo>
+cd /home/archetype/archetype-project/<repo-subdir>
 git push -u origin claude/route-audit-fixes/YYYY-MM-DD
 gh pr create --base dev --head claude/route-audit-fixes/YYYY-MM-DD \
   --title "audit fixes YYYY-MM-DD (<repo-short>)" \
   --body "$(cat <<EOF
-Applies approved findings from [audit run YYYY-MM-DD](https://github.com/MCxiaoguu/Archetype_collab_bot/blob/claude/route-audit-log/docs/audits/runs/YYYY-MM-DD.md).
+Applies approved findings from audit run YYYY-MM-DD. Log branch: \`claude/route-audit-log\` in Archetype_collab_bot.
 
 | # | Category | Title | Test | Result |
 |---|----------|-------|------|--------|
@@ -189,10 +204,10 @@ If the layer's full suite failed on any fix, pass `--draft` to `gh pr create`.
 
 ### 4. Update state + notify
 
-Back in `Archetype_collab_bot` on `claude/route-audit-log`:
+In the log worktree at `/tmp/route-audit-log`:
 - For each outcome, update `docs/audits/state.json` — `status` → `implemented` / `failed`, add `pr_url`, append to `history`.
 - Commit: `audit: apply YYYY-MM-DD (#<N> #<M> ...) — <K> PRs opened`.
-- Push.
+- Push. Then `git worktree remove --force /tmp/route-audit-log` to clean up.
 
 Telegram:
 
