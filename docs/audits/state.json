@@ -1,305 +1,152 @@
 {
   "findings": {
-    "a8c5ecadb6d538d9": {
+    "ad2017562872b6cb": {
       "category": "field-dup",
-      "title": "Soft-delete fields: isDeleted vs is_deleted vs deletedAt",
-      "path": "Archetype_Backend/services/persona_service.py",
+      "title": "_now_iso() helper redefined in 3+ route files",
+      "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "cb2001191c4bb323": {
+    "ab4dade580b6036b": {
       "category": "field-dup",
-      "title": "user_id extraction: 3 incompatible auth patterns",
-      "path": "Archetype_Backend/api/routes_user.py",
+      "title": "Duplicate transform_*_to_frontend() functions across route files",
+      "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "2658c23097f6c064": {
+    "8cd456b3caa9a00e": {
       "category": "field-dup",
-      "title": "Timestamp casing: createdAt vs created_at across collections",
-      "path": "Archetype_Backend/services/features.py",
+      "title": "Inconsistent segment/segmentName field naming across handlers",
+      "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "16947a4bf82de951": {
+    "073b969e596e5547": {
       "category": "field-dup",
-      "title": "datetime.utcnow() naive vs datetime.now(tz=utc) aware",
-      "path": "Archetype_Backend/infrastructure/database/delete.py",
+      "title": "Inconsistent session_id vs sessionId query parameter naming",
+      "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "bcd0b1a593c943be": {
+    "5cf1bcb06d278296": {
       "category": "field-dup",
-      "title": "userId camelCase vs user_id snake_case as DB field",
-      "path": "Archetype_Backend/services/features.py",
+      "title": "Inconsistent test_id vs testId query parameter naming",
+      "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "369b20158f99b13a": {
+    "3850c6c096c5e27f": {
       "category": "field-dup",
-      "title": "Session finished vs test completed: two terminal states",
-      "path": "Archetype_Backend/services/agent_simulation_service.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "beb193246359ada1": {
-      "category": "field-dup",
-      "title": "handleAuthError authenticatedFetch duplicated in auth.ts and route.ts",
+      "title": "handleAuthError authenticatedFetch API_BASE_URL triplicated",
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "c19a7d3309bd69b2": {
+    "ab1cc22d7fc0ede5": {
       "category": "field-dup",
-      "title": "UAT status enum mismatch: case-level vs test-level",
-      "path": "archetype_frontend/src/types/workspace.ts",
+      "title": "camelCase/snake_case field naming mixed in test state object",
+      "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "ec77e2a971357f2e": {
-      "category": "field-dup",
-      "title": "_now_iso() helper redefined in 9+ files",
-      "path": "Archetype_Backend/services/agent_simulation_service.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "6f9ab36b06cdfd95": {
+    "b2311b7f8eb30a99": {
       "category": "deprecation",
-      "title": "run_simulations() raises RuntimeError but route still calls it",
-      "path": "Archetype_Backend/services/agent_simulation_service.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "8ff8d4b90ccba9c9": {
-      "category": "deprecation",
-      "title": "get_reaction_results() raises RuntimeError and 2 routes call it",
-      "path": "Archetype_Backend/services/feedback_service.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "a3752cba53332e57": {
-      "category": "deprecation",
-      "title": "12 deprecated Dashboard pages still routed in App.tsx",
-      "path": "archetype_frontend/src/App.tsx",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "9383e71afe5604f3": {
-      "category": "deprecation",
-      "title": "DeprecationWarning used as decorator misuse",
+      "title": "3 deprecated test_engine endpoints still registered",
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "3fb0de6862c7cf38": {
+    "589974a232cc33e8": {
       "category": "deprecation",
-      "title": "5 deprecated backend endpoints still registered",
-      "path": "Archetype_Backend/api/routes_agent.py",
+      "title": "2 deprecated validation-tests endpoints still registered",
+      "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "b22344fb52ae7532": {
+    "bfc11fb0148a993c": {
       "category": "deprecation",
-      "title": "Frontend still calls deprecated getResults and getReactionTestResults",
+      "title": "Deprecated legacy validation test wizard still routed in App.tsx",
+      "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
+      "status": "open",
+      "first_seen": "2026-04-21",
+      "last_seen": "2026-04-21",
+      "history": []
+    },
+    "01e2a8f757f6c998": {
+      "category": "deprecation",
+      "title": "Deprecated HypothesisResult page still calls deprecated getResults()",
       "path": "archetype_frontend/src/pages/Dashboard/HypothesisResult.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "0c028190aafc66b4": {
+    "456c212aa09c4f79": {
       "category": "deprecation",
-      "title": "Deprecated distribution.py module still present",
-      "path": "Archetype_Backend/persona/distribution.py",
+      "title": "Deprecated PersonaSummary still routed at /dashboard/persona/summary",
+      "path": "archetype_frontend/src/pages/Dashboard/PersonaSummary.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "ffb4c8e9097f4441": {
+    "6ea93b78fe28a347": {
       "category": "deprecation",
-      "title": "4 deprecated validation-test wizard step components",
-      "path": "archetype_frontend/src/pages/Dashboard/validation-tests/FeatureDescriptionStep.tsx",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "33be8e6894762c79": {
-      "category": "redundant-endpoint",
-      "title": "3 endpoints return hypothesis test results",
-      "path": "Archetype_Backend/api/routes_agent.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "ab987884a407e8ab": {
-      "category": "redundant-endpoint",
-      "title": "Persona memories routes unreachable doubled segment",
-      "path": "Archetype_Backend/api/routes_persona.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "e5d70338ee72e0ae": {
-      "category": "redundant-endpoint",
-      "title": "2 endpoints for reaction results",
-      "path": "Archetype_Backend/api/routes_agent.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "00d8afe07169bb45": {
-      "category": "redundant-endpoint",
-      "title": "2 endpoints for feedback summary",
-      "path": "Archetype_Backend/api/routes_agent.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "55c3dcf97633b19f": {
-      "category": "redundant-endpoint",
-      "title": "Legacy user CRUD duplicates modern auth endpoints",
-      "path": "Archetype_Backend/api/routes_user.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "0a2eeae571ea2414": {
-      "category": "redundant-endpoint",
-      "title": "Wildcard import of routes_persona in app.py",
-      "path": "Archetype_Backend/app.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "ad11820f0ff96390": {
-      "category": "redundant-endpoint",
-      "title": "Validation test status superseded by test_engine status",
-      "path": "Archetype_Backend/api/routes_session.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "270462b876a9ba64": {
-      "category": "redundant-endpoint",
-      "title": "Frontend 3 API functions for same analytics summary endpoint",
+      "title": "startReactionOnlyTest() deprecated but still called",
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "5ffd2a31d3ec6592": {
-      "category": "placement",
-      "title": "Auth gap: 5 routes_agent.py endpoints lack require_auth",
+    "838a9a9bad4db0ad": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate reaction-results endpoints across routes_agent and routes_session",
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "801080dc4bd7a1d2": {
-      "category": "placement",
-      "title": "Auth gap: 5 routes_session.py endpoints lack require_auth",
-      "path": "Archetype_Backend/api/routes_session.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "7c0b89858cb89e45": {
-      "category": "placement",
-      "title": "Auth gap: 7 routes_persona.py endpoints lack require_auth",
-      "path": "Archetype_Backend/api/routes_persona.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "1badbbb2cf9dbfc4": {
-      "category": "placement",
-      "title": "start_test_session: 600-line handler with business logic",
+    "e694241a28d86f1c": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate feedback endpoints across routes_agent and routes_feedback",
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "90a463c9b1cca076": {
-      "category": "placement",
-      "title": "30 direct DB calls in routes_agent.py handler",
+    "d924cf5c33a5c92f": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate results endpoints across routes_agent and routes_session",
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "41abbfa9f5a646ce": {
-      "category": "placement",
-      "title": "routes_session.py is the service layer",
-      "path": "Archetype_Backend/api/routes_session.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "83bd34fc85420b8d": {
-      "category": "placement",
-      "title": "Plan-gating business logic in route handlers",
-      "path": "Archetype_Backend/api/routes_events.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "9a4a002f30b4ab02": {
-      "category": "placement",
-      "title": "Hardcoded subscription tier features map",
-      "path": "Archetype_Backend/api/routes_user.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "eabb104ae4e6541b": {
-      "category": "dead-code",
-      "title": "6 frontend mock data returns",
+    "c00fd660d5092f85": {
+      "category": "redundant-endpoint",
+      "title": "3 API functions for same analytics summary endpoint",
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
@@ -315,64 +162,64 @@
       "last_seen": "2026-04-21",
       "history": []
     },
-    "3279a954f1d9c726": {
+    "e592551c506f61a6": {
       "category": "dead-code",
-      "title": "Commented-out upload_prior route with live function body",
-      "path": "Archetype_Backend/api/routes_persona.py",
+      "title": "3 placeholder handlers with TODO comments",
+      "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "1d1385e0480b0626": {
+    "357ceb5b5cdba673": {
       "category": "dead-code",
-      "title": "Unused imports across 4 backend route files",
-      "path": "Archetype_Backend/api/routes_agent.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "7f6a71780c33a941": {
-      "category": "dead-code",
-      "title": "Copy-pasted user_id auth check in 44 handlers",
-      "path": "Archetype_Backend/api/routes_features.py",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "bef5686f570da907": {
-      "category": "dead-code",
-      "title": "useRankedFeedback hook returns empty array",
-      "path": "archetype_frontend/src/hooks/useApiQueries.ts",
-      "status": "open",
-      "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
-      "history": []
-    },
-    "c0190603070b476c": {
-      "category": "dead-code",
-      "title": "Unreachable API startLivePreview and getLiveSession",
+      "title": "6 API functions returning hardcoded mock data",
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "a32503224cebf132": {
+    "6003a3b2f48ed702": {
       "category": "dead-code",
-      "title": "Duplicate _to_int helper defined twice in routes_persona.py",
-      "path": "Archetype_Backend/api/routes_persona.py",
+      "title": "useRankedFeedback hook returns hardcoded empty array",
+      "path": "archetype_frontend/src/hooks/useApiQueries.ts",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
       "history": []
     },
-    "b7733698c7f0fa1b": {
-      "category": "dead-code",
-      "title": "Triplicated handleAuthError authenticatedFetch API_BASE_URL",
-      "path": "archetype_frontend/src/api/auth.ts",
+    "35921e3ece9bbbea": {
+      "category": "placement",
+      "title": "30+ direct DB calls in routes_agent.py handlers",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-21",
+      "last_seen": "2026-04-21",
+      "history": []
+    },
+    "d6aea4730a434ee3": {
+      "category": "placement",
+      "title": "Test document creation business logic in route handler",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-21",
+      "last_seen": "2026-04-21",
+      "history": []
+    },
+    "633cd5af1082a7f0": {
+      "category": "placement",
+      "title": "Test creation business logic in component instead of hook",
+      "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
+      "status": "open",
+      "first_seen": "2026-04-21",
+      "last_seen": "2026-04-21",
+      "history": []
+    },
+    "611aa1372d8a05ab": {
+      "category": "placement",
+      "title": "Complex test initialization logic inline in component",
+      "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
       "last_seen": "2026-04-21",
