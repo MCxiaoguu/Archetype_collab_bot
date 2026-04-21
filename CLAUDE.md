@@ -8,11 +8,37 @@ Cofounders @mention you in the Build topic to request features and fixes.
 ## Project Structure
 
 ## Git Branching
-Both repos are on the `dev` branch. Always commit and push to `dev`, never to `main`.
-When a feature is stable, cofounders will merge `dev` → `main` via PR.
+Both repos default to the `dev` branch. Never push directly to `main` — cofounders merge `dev` → `main` via PR when a feature is stable.
+
+**Decide whether to open a new branch from `dev` before you start work:**
+- **New feature** — open a new branch `feat/<short-name>` from `dev`, work there, open a PR back to `dev` when done. Never build a feature directly on `dev`.
+- **Small bug fix** (≤ ~50 LoC, no new public interface, no behavior change beyond the bug itself) — commit directly to `dev`. No branch needed.
+- **Ambiguous, or scope keeps growing during a fix** — switch to a `feat/` branch mid-work. Branches are cheap; a polluted `dev` is expensive.
+
 - `archetype_frontend/` — React + Vite + Tailwind frontend (separate git repo)
 - `Archetype_Backend/` — Python/Flask backend (separate git repo)
 - Each has its own git remote and can be pushed independently
+
+## Route Audit Approval Handling
+
+The daily route-audit cron at 9am (`/home/archetype/cron/route-audit-9am.sh`) posts a numbered findings list to this Telegram chat. Approval replies are handled **inline**, not via the normal parallel dispatch.
+
+When an inbound message from an authorized user matches one of these patterns:
+
+- `approve YYYY-MM-DD #N [#M ...]` — user approves those findings for fix mode
+- `skip YYYY-MM-DD #N [#M ...]` — user marks findings as skipped (suppressed for 30 days)
+
+React 👀, reply `⏳ Applying route-audit findings …` (with `reply_to`), then run:
+
+```bash
+cd /home/archetype/archetype-project && \
+/home/archetype/.local/bin/claude -p --model claude-opus-4-6 \
+  "Run the route-audit skill in FIX MODE. Payload: '<user's message verbatim>'. Environment has TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID exported. Follow .claude/skills/route-audit/SKILL.md exactly."
+```
+
+Stream the final Telegram post back as confirmation. If the subprocess exits non-zero, paste the tail of `/home/archetype/cron/logs/route-audit-$(date +%F).log` into the chat.
+
+Fix-mode output: PR to `dev` of the affected source repo (`Archetype_Backend` or `Archetype_Frontend`), branch `claude/route-audit-fixes/YYYY-MM-DD`. Each fix is gated by a characterization test that must be green before and after the change (idempotency check).
 
 ## Message Handling — Parallel Dispatch Model
 
