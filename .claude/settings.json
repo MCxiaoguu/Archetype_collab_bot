@@ -9,5 +9,61 @@
         "ARCHETYPE_API_URL": "http://localhost:5001"
       }
     }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(curl *)",
+      "Bash(uv *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(pytest *)",
+      "Bash(vitest *)",
+      "Bash(jq *)",
+      "Bash(sha1sum *)",
+      "Bash(openssl *)",
+      "Bash(mkdir *)",
+      "Bash(rm -rf /tmp/route-audit-*)",
+      "Bash(echo *)",
+      "Bash(printf *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+      "Bash(find *)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(sort *)",
+      "Bash(uniq *)",
+      "Bash(sed *)",
+      "Bash(awk *)",
+      "Bash(cut *)",
+      "Bash(tr *)",
+      "Bash(date *)",
+      "Bash(diff *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(chmod *)",
+      "Bash(ln *)",
+      "Bash(tee *)",
+      "Bash(which *)",
+      "Bash(command *)",
+      "Bash(test *)",
+      "Bash(cd *)",
+      "Write",
+      "Edit"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf ~/*)",
+      "Bash(rm -rf $HOME*)",
+      "Bash(git push *--force*)",
+      "Bash(git push *-f *)"
+    ]
   }
 }
