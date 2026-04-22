@@ -6,7 +6,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "285b16ac9a1ee793": {
@@ -15,7 +15,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "3b5fbd0c9bed36ef": {
@@ -24,7 +24,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "c3e4e47f63f39371": {
@@ -33,7 +33,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "8703a08836737da9": {
@@ -42,7 +42,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "98e61cebe7a7c84f": {
@@ -51,7 +51,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "45867f8d3ec15775": {
@@ -60,7 +60,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "eea34560e0416850": {
@@ -69,7 +69,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "244bb5b3e5999e41": {
@@ -78,7 +78,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "d6938c6ebcc46670": {
@@ -87,7 +87,7 @@
       "path": "Archetype_Backend/api/routes_user.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "4f4c2b9f8ff9c5c3": {
@@ -96,7 +96,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "8479e420842c757d": {
@@ -105,7 +105,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "a51a4813d7f451f3": {
@@ -114,7 +114,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "b26fe98e2d80201e": {
@@ -123,7 +123,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/HypothesisResult.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "ab65586affa09ff5": {
@@ -132,7 +132,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/PersonaSummary.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "6c8eaba613fde461": {
@@ -141,7 +141,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "c198dc629fdd0c0d": {
@@ -150,7 +150,7 @@
       "path": "Archetype_Backend/api/routes_user.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "9925186ea7680fb6": {
@@ -159,7 +159,7 @@
       "path": "archetype_frontend/src/App.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "5accb2c0712116cc": {
@@ -168,7 +168,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "adb99afb7444e0d2": {
@@ -177,7 +177,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "2e6d82054e796644": {
@@ -186,7 +186,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "f6ecd88732fcd7c5": {
@@ -195,7 +195,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "be03128363b35524": {
@@ -204,7 +204,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "31580e8eb08fe437": {
@@ -213,7 +213,7 @@
       "path": "Archetype_Backend/api/routes_features.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "cb7455129d676a07": {
@@ -222,7 +222,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "e592551c506f61a6": {
@@ -231,7 +231,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "71a43263b93dc0c9": {
@@ -240,7 +240,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "75aef5b00067adc4": {
@@ -249,7 +249,7 @@
       "path": "archetype_frontend/src/hooks/useApiQueries.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "35550e23fd8c8597": {
@@ -258,7 +258,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "3b8b30feba904e01": {
@@ -267,7 +267,7 @@
       "path": "archetype_frontend/src/components/Navbar.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "498b310c03dfe88d": {
@@ -276,7 +276,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "869ac5fca431d1b7": {
@@ -285,7 +285,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "237f6ea488e14d1a": {
@@ -294,7 +294,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "1955cccd6856a466": {
@@ -303,7 +303,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "bec1aa0b06af97dc": {
@@ -312,7 +312,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "1e8b0e56c958659e": {
@@ -321,7 +321,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "a604b454ba4901b7": {
@@ -330,7 +330,7 @@
       "path": "Archetype_Backend/api/routes_validation_monitor.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
       "history": []
     },
     "e3c971f7e3928e1c": {
@@ -339,10 +339,64 @@
       "path": "archetype_frontend/src/hooks/useTestStatus.ts",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-21",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "6b9504a1ce7666bd": {
+      "category": "dead-code",
+      "title": "Debug print() statements in production routes_user.py",
+      "path": "Archetype_Backend/api/routes_user.py",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "26f6b4d2ae0df67f": {
+      "category": "dead-code",
+      "title": "Debug print() statements in production routes_events.py",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "fe980ec21cc36d59": {
+      "category": "dead-code",
+      "title": "Debug print() statements in production routes_session.py",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "3b87459b9e1a7b18": {
+      "category": "placement",
+      "title": "Direct fetch in useValidationMonitor bypassing API layer",
+      "path": "archetype_frontend/src/hooks/useValidationMonitor.ts",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "0ba8f3a6adacb027": {
+      "category": "placement",
+      "title": "BTWComposer inline fetch bypassing API layer",
+      "path": "archetype_frontend/src/components/workspace/validation-monitor/BTWComposer.tsx",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
+      "history": []
+    },
+    "2066131a5b4ad49a": {
+      "category": "placement",
+      "title": "Auth checks missing on 5 session endpoints",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-22",
+      "last_seen": "2026-04-22",
       "history": []
     }
   },
-  "last_run": "2026-04-21",
+  "last_run": "2026-04-22",
   "_schema": "route-audit/1"
 }
