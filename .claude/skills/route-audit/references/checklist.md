@@ -15,6 +15,11 @@ This is the canonical checklist the audit walks each morning. Each bullet maps t
 - Mock data returns inside hooks where a real endpoint now exists
 - Duplicate middleware application across handlers that should be centralized
 - Error handling logic copy-pasted across multiple handlers instead of shared
+- `try-except` blocks wrapping imports of non-existent modules (used to keep broken code alive)
+- `try-except` blocks that catch and silently swallow exceptions (`except: pass`, `except Exception: pass`, or `except Exception: variable = None`)
+- `try-except` blocks where the except branch sets a fallback that hides a real failure (e.g., `except: data = {}` masking a broken service call)
+- `try-except` around code that should never fail — if the guarded code is correct, the try-except is dead weight; if it does fail, the silent catch hides the bug
+- Bare `except:` without specifying an exception type
 
 ## Deprecation Markers  `[deprecation]`
 - `# deprecated`, `# TODO: remove`, or explicit deprecation comments in module docstrings

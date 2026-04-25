@@ -67,7 +67,7 @@ Load `references/checklist.md`. Each bullet is a check. For each check, scan bot
 Classify each raw finding into one of the five categories used by the fingerprint:
 
 - `redundant-endpoint` — duplicate route registration, duplicate handlers, module-missing blueprint, naming-only duplicates
-- `dead-code` — unused imports, unreferenced helpers, commented-out routes, mock returns shadowing real endpoints, copy-paste error handlers
+- `dead-code` — unused imports, unreferenced helpers, commented-out routes, mock returns shadowing real endpoints, copy-paste error handlers, **try-except blocks that silently swallow errors or keep broken code alive** (bare `except:`, `except: pass`, fallback assignments that mask failures, try-except around imports of non-existent modules)
 - `deprecation` — `# deprecated`, `# TODO: remove`, hook-to-old-endpoint, unmigrated state access
 - `field-dup` — cross-layer field name drift, enum divergence, timestamp multi-writer, inconsistent user_id extraction, split validation rules
 - `placement` — business logic in route handler, direct DB in handler, ad-hoc LLM client, inconsistent auth check, inline constants
