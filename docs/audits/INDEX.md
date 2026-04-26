@@ -1,5 +1,6 @@
 # Route audit run log
 
+- **2026-04-26** - open: 88, suppressed: 0, new: 33
 Most recent first.
 - **2026-04-23** — open=54, suppressed=0, new=50 | [run](runs/2026-04-23.md)
 - **2026-04-25** — open=62, suppressed=0, new=6 (try-except audit expansion)

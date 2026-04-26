@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-04-25",
+  "last_run": "2026-04-26",
   "findings": {
     "fp:c6156c3baefc18b4": {
       "category": "redundant-endpoint",
@@ -8,7 +8,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:ce0ea2797e7b98af": {
@@ -17,7 +17,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:8f740e6b961ba0eb": {
@@ -26,7 +26,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:ed0170687a9ac092": {
@@ -35,7 +35,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:31580e8eb08fe437": {
@@ -44,7 +44,7 @@
       "path": "Archetype_Backend/api/routes_features.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:c00fd660d5092f85": {
@@ -53,7 +53,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:19b1684fc0117a4c": {
@@ -62,7 +62,25 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:91ed903c1918e5d1": {
+      "category": "redundant-endpoint",
+      "title": "Legacy /user/* profile endpoints duplicate canonical /users/me endpoints",
+      "path": "Archetype_Backend/api/routes_user.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:0f346b237754d03f": {
+      "category": "redundant-endpoint",
+      "title": "Two persona-memory endpoints both unreachable from frontend",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:18191dd4b4177999": {
@@ -71,7 +89,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:0600c50f26b110fb": {
@@ -80,7 +98,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:e592551c506f61a6": {
@@ -89,7 +107,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-21",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:3c324ed3dfb7a2ac": {
@@ -98,7 +116,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:0e7e26357bcd555c": {
@@ -107,7 +125,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:c97507bf70d4ecb7": {
@@ -116,7 +134,7 @@
       "path": "Archetype_Backend/app.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:b8f5b5194fa72ef4": {
@@ -125,7 +143,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:015ee38cdfedb0fe": {
@@ -134,7 +152,7 @@
       "path": "Archetype_Backend/api/routes_user.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:de08403f25838924": {
@@ -143,7 +161,7 @@
       "path": "Archetype_Backend/api/routes_events.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:1326f938c67d2083": {
@@ -152,7 +170,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:357ceb5b5cdba673": {
@@ -161,7 +179,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:6003a3b2f48ed702": {
@@ -170,7 +188,7 @@
       "path": "archetype_frontend/src/hooks/useApiQueries.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:5a6c281814db5099": {
@@ -179,7 +197,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:fa61fb0dd126d83e": {
@@ -188,7 +206,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:a75db2533cad6ebb": {
@@ -197,7 +215,196 @@
       "path": "archetype_frontend/src/components/Navbar.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:40cba3d05b83bd68": {
+      "category": "dead-code",
+      "title": "_parse_int and _to_int helper redefined 3 times in same file",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:612824fb415e1b33": {
+      "category": "dead-code",
+      "title": "Silent except:pass in routes_agent.py swallows snapshot logging failure",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:09e052e5028983f0": {
+      "category": "dead-code",
+      "title": "Three silent except:pass blocks in routes_session.py",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:f72cb74abbdb911e": {
+      "category": "dead-code",
+      "title": "except block masks compute_simple_hypothesis_metrics failure in routes_agent.py",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:2def307b4073a39d": {
+      "category": "dead-code",
+      "title": "Duplicate metrics fallback in routes_session.py masks same failure",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:c44910242ded8655": {
+      "category": "dead-code",
+      "title": "except:pass in routes_events.py cursor check hides SSE errors",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:a0c63a4096de401b": {
+      "category": "dead-code",
+      "title": "Fallback in routes_persona.py hides preview_count parse failure",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:5639be86df377c38": {
+      "category": "dead-code",
+      "title": "Deprecated draw_persona() file with unused imports",
+      "path": "Archetype_Backend/persona/distribution.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:0c5ca0259f788578": {
+      "category": "dead-code",
+      "title": "useAuth mock function in authConfig.ts shadowed by real implementation",
+      "path": "archetype_frontend/src/auth/authConfig.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:efca6bb26436f0b8": {
+      "category": "dead-code",
+      "title": "useCalculateNumSessions and useDebounce hooks exported but never consumed",
+      "path": "archetype_frontend/src/hooks/useApiQueries.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:76009d0d638bb288": {
+      "category": "dead-code",
+      "title": "getDefaultUserId returns hardcoded demo-user placeholder in production",
+      "path": "archetype_frontend/src/api/progress.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:133de7fb03025dee": {
+      "category": "dead-code",
+      "title": "calculate_num_sessions hardcoded stub returning 1",
+      "path": "Archetype_Backend/infrastructure/analytics/param_calc.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:02a8c11128c0db96": {
+      "category": "dead-code",
+      "title": "except:pass silently drops memory-write failures in persona bootstrapper",
+      "path": "Archetype_Backend/persona/bootstrapper.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:b07e19ca7f1d7dd1": {
+      "category": "dead-code",
+      "title": "except:pass silently drops DB write failures in agent_simulation_service",
+      "path": "Archetype_Backend/services/agent_simulation_service.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:8c9cf9923c12c691": {
+      "category": "dead-code",
+      "title": "except block masks feature_description DB lookup failure",
+      "path": "Archetype_Backend/services/agent_simulation_service.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:0e3d1225ae177adb": {
+      "category": "dead-code",
+      "title": "_publish _handle_task_failure _handle_soft_timeout swallow all exceptions in UAT tasks",
+      "path": "Archetype_Backend/tasks/uat_tasks.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:495a06a0f73f2ce9": {
+      "category": "dead-code",
+      "title": "persona.seed._get swallows float-parse errors returning 0.5 fallback",
+      "path": "Archetype_Backend/persona/seed.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:1f0b720cd3925ed2": {
+      "category": "dead-code",
+      "title": "Four except:parsed={} blocks silently discard LLM batch parse failures",
+      "path": "Archetype_Backend/persona/persona.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:36485bb78e06c39c": {
+      "category": "dead-code",
+      "title": "Extensive print() debug statements in production UAT task runner",
+      "path": "Archetype_Backend/tasks/uat_tasks.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:afb642a9a7c86cb2": {
+      "category": "dead-code",
+      "title": "console.log statements throughout frontend API layer in production",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:f67caa56ad5ecbcd": {
+      "category": "dead-code",
+      "title": "Commented-out integration hook block in feedback.py",
+      "path": "Archetype_Backend/infrastructure/analytics/feedback.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:25574157dbae76b3": {
@@ -206,7 +413,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:6ce917d27978833a": {
@@ -215,7 +422,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:4212345e357e2dc6": {
@@ -224,7 +431,7 @@
       "path": "Archetype_Backend/api/routes_user.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:d39a5ef289d7c122": {
@@ -233,7 +440,7 @@
       "path": "archetype_frontend/src/App.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:01e2a8f757f6c998": {
@@ -242,7 +449,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/HypothesisResult.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:e1a0826c1418c439": {
@@ -251,7 +458,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:3c0da591655e8d3e": {
@@ -260,7 +467,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:d2128614a25852f7": {
@@ -269,7 +476,25 @@
       "path": "archetype_frontend/src/pages/Dashboard/PersonaSummary.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:5b5c2a6b420dcc14": {
+      "category": "deprecation",
+      "title": "getReactionTestResults exported but never called from frontend",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:75955daed6ff2f50": {
+      "category": "deprecation",
+      "title": "adaptRollup shim wraps v2 analytics in LegacyAnalytics struct",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:d63d3fd02e080af1": {
@@ -278,7 +503,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:7007d60d632b9422": {
@@ -287,7 +512,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:f06dc4875ab5fda5": {
@@ -296,7 +521,7 @@
       "path": "Archetype_Backend/services/persona_service.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:8cd456b3caa9a00e": {
@@ -305,7 +530,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:fca5958329ea1ec9": {
@@ -314,7 +539,7 @@
       "path": "Archetype_Backend/api/routes_user.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:69108bd3b1e65e28": {
@@ -323,7 +548,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:44bafcc0994433d6": {
@@ -332,7 +557,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:257a1bfc34921125": {
@@ -341,7 +566,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:fb9c8f87ddaa63d9": {
@@ -350,7 +575,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:6333fc8052675622": {
@@ -359,7 +584,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:257a65506e2cfc1d": {
@@ -368,7 +593,52 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:b3679cafc4afec66": {
+      "category": "field-dup",
+      "title": "productDescription dual-key parsing in 3 routes",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:ff8e68a65f2fc62c": {
+      "category": "field-dup",
+      "title": "t vs timestamp vs created_at for step event time in analytics",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:a3084b9815860e83": {
+      "category": "field-dup",
+      "title": "Frontend pool.metadata accessed with both snake_case and camelCase",
+      "path": "archetype_frontend/src/pages/Dashboard/SelectPersona.tsx",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:4310a3aabc6f3682": {
+      "category": "field-dup",
+      "title": "canCreateTest quota check duplicated across 3 call sites",
+      "path": "archetype_frontend/src/components/Navigation.tsx",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
+      "history": []
+    },
+    "fp:6a3af1c4cbb6732c": {
+      "category": "field-dup",
+      "title": "Duplicate test-results endpoint response body in two route files",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:48634c6a239b9496": {
@@ -377,7 +647,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:609873e6cf705332": {
@@ -386,7 +656,7 @@
       "path": "Archetype_Backend/api/routes_bootstrap.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:87ebfe93a7c165ac": {
@@ -395,7 +665,7 @@
       "path": "Archetype_Backend/api/routes_validation_monitor.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:2066131a5b4ad49a": {
@@ -404,7 +674,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-22",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:d6aea4730a434ee3": {
@@ -413,7 +683,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:a54f8f07c2709212": {
@@ -422,7 +692,7 @@
       "path": "Archetype_Backend/api/routes_persona.py",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:0d9112187ea0232a": {
@@ -431,7 +701,7 @@
       "path": "archetype_frontend/src/hooks/useTestStatus.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:8b643a3088307155": {
@@ -440,7 +710,7 @@
       "path": "archetype_frontend/src/hooks/useValidationMonitor.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:0ba8f3a6adacb027": {
@@ -449,7 +719,7 @@
       "path": "archetype_frontend/src/components/workspace/validation-monitor/BTWComposer.tsx",
       "status": "open",
       "first_seen": "2026-04-22",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:1df6fa148bd106ce": {
@@ -458,7 +728,7 @@
       "path": "archetype_frontend/src/components/Footer.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:0ba6ab7b7a51f599": {
@@ -467,7 +737,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:633cd5af1082a7f0": {
@@ -476,7 +746,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/CreateValidationTest.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:611aa1372d8a05ab": {
@@ -485,7 +755,7 @@
       "path": "archetype_frontend/src/pages/Dashboard/RunTesting.tsx",
       "status": "open",
       "first_seen": "2026-04-23",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
     "fp:e8d41207c0c771b7": {
@@ -494,70 +764,34 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-04-24",
-      "last_seen": "2026-04-25",
+      "last_seen": "2026-04-26",
       "history": []
     },
-    "fp:2c1daf57bd65ef3d": {
-      "category": "dead-code",
-      "title": "_parse_int and _to_int helper redefined 3 times in same file",
-      "path": "Archetype_Backend/api/routes_persona.py",
-      "status": "open",
-      "first_seen": "2026-04-24",
-      "last_seen": "2026-04-25",
-      "history": []
-    },
-    "fp:e90804d542bf03e7": {
-      "category": "dead-code",
-      "title": "Silent except:pass in routes_agent.py swallows snapshot logging failure",
+    "fp:fc43b4b2d5b3012e": {
+      "category": "placement",
+      "title": "Auth checks missing on 3 routes_agent endpoints",
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
-    "fp:411189c103e61fff": {
-      "category": "dead-code",
-      "title": "Three silent except:pass blocks in routes_session.py",
-      "path": "Archetype_Backend/api/routes_session.py",
+    "fp:57f775f7af0c4b72": {
+      "category": "placement",
+      "title": "Direct fetch without auth in personaDetails.ts",
+      "path": "archetype_frontend/src/api/personaDetails.ts",
       "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     },
-    "fp:ac4714d9d3a231d5": {
-      "category": "dead-code",
-      "title": "except block masks compute_simple_hypothesis_metrics failure in routes_agent.py",
-      "path": "Archetype_Backend/api/routes_agent.py",
+    "fp:063c467272e0e2d0": {
+      "category": "placement",
+      "title": "LLM client instantiated ad-hoc in session_extractor and tasks",
+      "path": "Archetype_Backend/infrastructure/analytics/session_extractor.py",
       "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
-      "history": []
-    },
-    "fp:3a79916dab98602d": {
-      "category": "dead-code",
-      "title": "Duplicate metrics fallback in routes_session.py masks same failure",
-      "path": "Archetype_Backend/api/routes_session.py",
-      "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
-      "history": []
-    },
-    "fp:f606abcdf0e249a9": {
-      "category": "dead-code",
-      "title": "except:pass in routes_events.py cursor check hides SSE errors",
-      "path": "Archetype_Backend/api/routes_events.py",
-      "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
-      "history": []
-    },
-    "fp:0f21a974f512c21c": {
-      "category": "dead-code",
-      "title": "Fallback in routes_persona.py hides preview_count parse failure",
-      "path": "Archetype_Backend/api/routes_persona.py",
-      "status": "open",
-      "first_seen": "2026-04-25",
-      "last_seen": "2026-04-25",
+      "first_seen": "2026-04-26",
+      "last_seen": "2026-04-26",
       "history": []
     }
   }
