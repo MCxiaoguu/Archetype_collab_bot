@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-04-27",
+  "last_run": "2026-04-28",
   "findings": {
     "fp:c6156c3baefc18b4": {
       "category": "redundant-endpoint",
@@ -919,6 +919,222 @@
       "first_seen": "2026-04-27",
       "last_seen": "2026-04-27",
       "history": []
+    },
+    "fp:7f96d437cc9601cf": {
+      "category": "field-dup",
+      "title": "segment_name / segment / segmentName triple-key fallback (routes_agent.py:104)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:085524a51ebd06f7": {
+      "category": "field-dup",
+      "title": "productDescription / product_description / product_desc triple-key (routes_agent.py:86-91)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:ff5e78e4b3d98770": {
+      "category": "field-dup",
+      "title": "user_id accepted from request body in routes_persona.py:568",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:b969519341bea381": {
+      "category": "deprecation",
+      "title": "Stale TODO comment at routes_agent.py:84",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:5ac830a19251fe9d": {
+      "category": "deprecation",
+      "title": "Stale TODO at routes_agent.py:544 re payment plan parameters",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:81e6bab4f4fdaaa0": {
+      "category": "deprecation",
+      "title": "Stale TODO block at route.ts:7-10 re backend integration",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:802f9b5179903ad6": {
+      "category": "redundant-endpoint",
+      "title": "Deprecated GET /test_engine/test/<id>/reaction-results still active",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:8d23e917644125c6": {
+      "category": "redundant-endpoint",
+      "title": "Deprecated GET /test_engine/test/<id>/feedback still active",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:4a100b07e7f0eff1": {
+      "category": "redundant-endpoint",
+      "title": "Deprecated GET /test_engine/test/<id>/results still active",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:546722cf3e4cf16c": {
+      "category": "redundant-endpoint",
+      "title": "Deprecated GET /validation-tests/<id>/results still active",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:fd190ea1bda85212": {
+      "category": "redundant-endpoint",
+      "title": "Deprecated GET /validation-tests/<id>/reaction-results still active",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:75d157f7cf2e12b8": {
+      "category": "redundant-endpoint",
+      "title": "Legacy /user/* endpoints have zero frontend callers",
+      "path": "Archetype_Backend/api/routes_user.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:b66817db7ec45ac4": {
+      "category": "placement",
+      "title": "600-line start_test_session handler with 13+ direct DB calls (routes_agent.py:45)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:e927de2521f77a76": {
+      "category": "placement",
+      "title": "Test creation handler with direct DB calls (routes_session.py:213-380)",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:ec813368af86ac15": {
+      "category": "placement",
+      "title": "Live URL handler with 3 direct DB calls (routes_session.py:138-207)",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:6a05fd790ec17c90": {
+      "category": "placement",
+      "title": "All persona endpoints missing @require_auth (routes_persona.py)",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:7573fabce72b7bdf": {
+      "category": "placement",
+      "title": "POST /test_engine/start_session missing @require_auth (routes_agent.py:45)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:e9776bd217ef8dcc": {
+      "category": "placement",
+      "title": "GET /test_engine/num_sessions and /get_session missing @require_auth",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:e74980e146cdfe59": {
+      "category": "dead-code",
+      "title": "4 @deprecated Dashboard pages still imported in App.tsx",
+      "path": "archetype_frontend/src/pages/Dashboard",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:00c180a30e52dd4c": {
+      "category": "dead-code",
+      "title": "Unused interface TestData in workspace.ts:35",
+      "path": "archetype_frontend/src/types/workspace.ts",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:f5fc939453b49821": {
+      "category": "dead-code",
+      "title": "Duplicate Block/BlockType definitions in BlockItem.tsx",
+      "path": "archetype_frontend/src/components/BlockEditor/BlockItem.tsx",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:9a415abd64482cfb": {
+      "category": "dead-code",
+      "title": "Commented-out radarChartB code in SelectPersona and personaDetails",
+      "path": "archetype_frontend/src/pages/Dashboard/SelectPersona.tsx",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:e10f10ea42f7ea91": {
+      "category": "dead-code",
+      "title": "api/__init__.py is a stale placeholder with unfulfilled TODOs",
+      "path": "Archetype_Backend/api/__init__.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:6966e91d6814a362": {
+      "category": "dead-code",
+      "title": "Silent try-except:pass in request logging (routes_agent.py:93-98)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:5969234b784bbdfc": {
+      "category": "dead-code",
+      "title": "Silent try-except:pass swallows Redis cursor errors (routes_events.py:85-96)",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:224c0011ed2945c1": {
+      "category": "dead-code",
+      "title": "try-except fallback masks broken hypothesis metrics (routes_agent.py:1020-1023)",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
+    },
+    "fp:827d4fd6c5c03f83": {
+      "category": "dead-code",
+      "title": "Blueprint registration silently skips broken modules (app.py:68-76)",
+      "path": "Archetype_Backend/app.py",
+      "status": "open",
+      "first_seen": "2026-04-28",
+      "last_seen": "2026-04-28"
     }
   }
 }
