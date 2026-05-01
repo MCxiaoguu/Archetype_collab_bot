@@ -5,6 +5,7 @@
 - **2026-04-26** - open: 88, suppressed: 0, new: 33
 Most recent first.
 
+- **2026-05-01** — open=154, suppressed=0
 | 2026-04-29 | 134 | 0 | 32 | f85444d | 7bf3a47 |
 
 
