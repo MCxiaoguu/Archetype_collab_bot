@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-05-01",
+  "last_run": "2026-05-02",
   "findings": {
     "fp:c6156c3baefc18b4": {
       "category": "redundant-endpoint",
@@ -2998,6 +2998,134 @@
       "first_seen": "2026-05-01",
       "last_seen": "2026-05-01",
       "history": []
+    },
+    "287385c7dfd8ab5e": {
+      "category": "field-dup",
+      "title": "Status 'finished' mapped to 'completed' in two route handlers",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "ef197df7f16af78d": {
+      "category": "field-dup",
+      "title": "Test status enum values inconsistent across components",
+      "path": "archetype_frontend/src/components/workspace/ValidationMonitor.tsx",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "b3c6d10b4b907e6c": {
+      "category": "field-dup",
+      "title": "feature_name vs featureName vs testType across layers",
+      "path": "archetype_frontend/src/types/analytics.ts",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "4dca174afd323d2b": {
+      "category": "deprecation",
+      "title": "Three deprecated endpoints still active in routes_agent.py",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "e2885aa4faec1a2a": {
+      "category": "deprecation",
+      "title": "Two deprecated endpoints still active in routes_session.py",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "da112918a6d475c1": {
+      "category": "deprecation",
+      "title": "Four deprecated Dashboard pages still in tree",
+      "path": "archetype_frontend/src/pages/Dashboard",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "512852eb4a3d3f63": {
+      "category": "deprecation",
+      "title": "TODO to re-add persona-memory endpoints -- service now exists",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "b415d3bd01867e05": {
+      "category": "deprecation",
+      "title": "Stale placeholder TODOs from initial scaffold",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "cc67d5f57ea8d594": {
+      "category": "dead-code",
+      "title": "Unused os and uuid imports",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "b14791d59d5b02c0": {
+      "category": "dead-code",
+      "title": "try-except silently swallows logging snapshot error",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "6b6a271a80f53da9": {
+      "category": "dead-code",
+      "title": "Three silent try-except blocks hide failures",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "447d3f2cded3e077": {
+      "category": "dead-code",
+      "title": "try-except swallows stale cursor check error",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "ef24b09fb2d37519": {
+      "category": "placement",
+      "title": "Direct DB find_one() calls in route handler",
+      "path": "Archetype_Backend/api/routes_feedback.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "2de574d5f2204f00": {
+      "category": "placement",
+      "title": "Multiple direct DB queries in btw_ask handler",
+      "path": "Archetype_Backend/api/routes_validation_monitor.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "4199baf6b7d5e8eb": {
+      "category": "placement",
+      "title": "24-line transform_user_to_frontend in route layer",
+      "path": "Archetype_Backend/api/routes_user.py",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
+    },
+    "7f4b982fadf322c7": {
+      "category": "placement",
+      "title": "Duplicate OCCUPATION_SUGGESTIONS and ADD_FEATURE_FIELDS constants",
+      "path": "archetype_frontend/src/pages/Workspace",
+      "status": "open",
+      "first_seen": "2026-05-02",
+      "last_seen": "2026-05-02"
     }
   }
 }
