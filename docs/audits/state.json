@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-05-04",
+  "last_run": "2026-05-05",
   "findings": {
     "fp:c6156c3baefc18b4": {
       "category": "redundant-endpoint",
@@ -2492,7 +2492,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-05-01",
-      "last_seen": "2026-05-01",
+      "last_seen": "2026-05-05",
       "history": []
     },
     "fp:935f4a308f41f4ed": {
@@ -4259,6 +4259,258 @@
       "status": "open",
       "first_seen": "2026-05-04",
       "last_seen": "2026-05-04",
+      "history": []
+    },
+    "fp:d9242c564f2ed07a": {
+      "category": "dead-code",
+      "title": "Bare except swallows exception without logging in snapshot logging",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:fa5c7d0f6dc514ff": {
+      "category": "dead-code",
+      "title": "Silent exception swallow during pool top-up",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:31ea7f006aa8d4a0": {
+      "category": "dead-code",
+      "title": "Bare except swallows logging error in request snapshot",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:f2228858cfec4aaf": {
+      "category": "dead-code",
+      "title": "Silent exception in loop allows partial task revocation",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:2da03588face3596": {
+      "category": "dead-code",
+      "title": "Fallback metrics hide computation failures",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:aae3e1ce69acdc1f": {
+      "category": "dead-code",
+      "title": "Silent exception swallow in feedback logging",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:7845a35b7887dcfd": {
+      "category": "dead-code",
+      "title": "Bare except swallows exception in cursor validation",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:8686ff6803824271": {
+      "category": "dead-code",
+      "title": "Bare except hides bootstrap import failures",
+      "path": "Archetype_Backend/api/routes_bootstrap.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:ab9527302a967f32": {
+      "category": "dead-code",
+      "title": "Fallback metrics mask computation failures in agent routes",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:759b8677faaf7152": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate feedback endpoints with different URL paths",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:e51c3480cb9bf0b6": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate reaction-results endpoints with different URL paths",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:5e8c7f4c89a65093": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate results endpoints with different URL paths",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:3a90164544fa09a0": {
+      "category": "deprecation",
+      "title": "Deprecated endpoints retained for backward compatibility",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:0445e62f9047e7e1": {
+      "category": "deprecation",
+      "title": "Deprecated validation test endpoints retained",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:95387f0780e75490": {
+      "category": "field-dup",
+      "title": "Inconsistent field naming testId vs test_id in routes_agent",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:85d0c353834c0b7e": {
+      "category": "dead-code",
+      "title": "Unused imports Any and Dict in routes_feedback",
+      "path": "Archetype_Backend/api/routes_feedback.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:492a1ffecbf78d1e": {
+      "category": "placement",
+      "title": "Missing admin role check for privileged endpoint",
+      "path": "Archetype_Backend/api/routes_progress.py",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:919b5124f2927d5a": {
+      "category": "dead-code",
+      "title": "Unused API function getReactionTestResults",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:8924354a950e7f9d": {
+      "category": "dead-code",
+      "title": "Unused API function findClosestRunningTest",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:0b9d4dccc505be31": {
+      "category": "dead-code",
+      "title": "Unused API function startLivePreview",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:91fcff465d212a84": {
+      "category": "dead-code",
+      "title": "Unused API function getLiveSession",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:b853474a1aa37faf": {
+      "category": "dead-code",
+      "title": "Unused API function getTestEngineLogs",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:77be2f8c28497a33": {
+      "category": "dead-code",
+      "title": "Unused API function markTestAsCompleted",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:1e86832e368deaaa": {
+      "category": "dead-code",
+      "title": "Unused hook useDebounce",
+      "path": "archetype_frontend/src/hooks/useApiQueries.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:cbfafc396615068b": {
+      "category": "dead-code",
+      "title": "Unused hook useCalculateNumSessions",
+      "path": "archetype_frontend/src/hooks/useApiQueries.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:f472d3235c8f2df5": {
+      "category": "field-dup",
+      "title": "Inconsistent field naming testId vs test_id in frontend API",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:80361b6d3cc916a0": {
+      "category": "field-dup",
+      "title": "Inconsistent field naming sessionId vs session_id",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
+      "history": []
+    },
+    "fp:ce078787a1dd4e6e": {
+      "category": "deprecation",
+      "title": "Legacy analytics adaptation layer still in place",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-05",
+      "last_seen": "2026-05-05",
       "history": []
     }
   }
