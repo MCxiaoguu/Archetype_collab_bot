@@ -9,6 +9,8 @@
 - **2026-04-26** - open: 88, suppressed: 0, new: 33
 Most recent first.
 
+- **2026-05-07** -- open: 60, suppressed: 0 ([run](runs/2026-05-07.md))
+- **2026-05-07** -- open: 60, suppressed: 0 ([run](runs/2026-05-07.md))
 - **2026-05-05** — open=29, suppressed=0 ([run log](runs/2026-05-05.md))
 - **2026-05-01** — open=154, suppressed=0
 | 2026-04-29 | 134 | 0 | 32 | f85444d | 7bf3a47 |
