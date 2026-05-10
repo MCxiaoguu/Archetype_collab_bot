@@ -1,5 +1,6 @@
 # Route audit run log
 
+- [2026-05-10](runs/2026-05-10.md) — open=25, suppressed=0
 - [2026-05-08](runs/2026-05-08.md) — open=97, suppressed=0
 - [2026-05-06](runs/2026-05-06.md) — open=144, suppressed=0, new=41
 - [2026-05-04](runs/2026-05-04.md) — open=164, suppressed=0, new=21
