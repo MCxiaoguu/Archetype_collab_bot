@@ -11,6 +11,7 @@
 - **2026-04-26** - open: 88, suppressed: 0, new: 33
 Most recent first.
 
+- **2026-05-11** — 25 open, 0 suppressed
 - **2026-05-09** — 157 open, 0 suppressed
 - **2026-05-07** -- open: 60, suppressed: 0 ([run](runs/2026-05-07.md))
 - **2026-05-07** -- open: 60, suppressed: 0 ([run](runs/2026-05-07.md))

@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-05-10",
+  "last_run": "2026-05-11",
   "findings": {
     "fp:00a1ca3820138552": {
       "category": "field-dup",
@@ -269,7 +269,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-05-07",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:93c7c68c97afd598": {
@@ -341,7 +341,7 @@
       "path": "Archetype_Backend/api/routes_bootstrap.py",
       "status": "open",
       "first_seen": "2026-05-07",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:9c0bffb0a6c1b333": {
@@ -584,7 +584,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:559d317b6f6669d0": {
@@ -782,7 +782,7 @@
       "path": "Archetype_Backend/api/routes_agent.py",
       "status": "open",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:09ca3110a49d26a9": {
@@ -890,7 +890,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:936f15a3b40eb229": {
@@ -908,7 +908,7 @@
       "path": "archetype_frontend/src/components/workspace/validation-monitor/BTWComposer.tsx",
       "status": "open",
       "first_seen": "2026-05-08",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:1df6fa148bd106ce": {
@@ -1376,7 +1376,7 @@
       "path": "Archetype_Backend/services/agent_simulation_service.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:07cf332ae631701b": {
@@ -1394,7 +1394,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:d6938c6ebcc46670": {
@@ -1439,7 +1439,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:feade3ccd1054dbf": {
@@ -1448,7 +1448,7 @@
       "path": "archetype_frontend/src/api/route.ts",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:45867f8d3ec15775": {
@@ -1466,7 +1466,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:bfa56b408e2c0fb7": {
@@ -1547,7 +1547,7 @@
       "path": "archetype_frontend/src/utils/memoryFormat.ts",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:aac5aa5c7d8f770c": {
@@ -1592,7 +1592,7 @@
       "path": "Archetype_Backend/services/feedback_service.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:8a844bbc7013eab9": {
@@ -1655,7 +1655,7 @@
       "path": "archetype_frontend/src/App.tsx",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:26a8876372c530ed": {
@@ -1700,7 +1700,7 @@
       "path": "Archetype_Backend/persona/distribution.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:33ccec1e5dd23c4e": {
@@ -2024,7 +2024,7 @@
       "path": "Archetype_Backend/api/routes_session.py",
       "status": "open",
       "first_seen": "2026-05-09",
-      "last_seen": "2026-05-09",
+      "last_seen": "2026-05-11",
       "history": []
     },
     "fp:c81327519589c3bc": {
@@ -2781,6 +2781,87 @@
       "status": "open",
       "first_seen": "2026-05-10",
       "last_seen": "2026-05-10",
+      "history": []
+    },
+    "fp:e3aacf1aab78a4b7": {
+      "category": "field-dup",
+      "title": "User ID extraction from request inconsistent across files",
+      "path": "Archetype_Backend/api/routes_user.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:4f4c2b9f8ff9c5c3": {
+      "category": "deprecation",
+      "title": "3 deprecated test_engine endpoints still registered",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:e1e899353b12fcc0": {
+      "category": "placement",
+      "title": "600-line start_test_session handler with 13+ direct DB calls",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:ce85da240f1a9840": {
+      "category": "placement",
+      "title": "Inline imports inside handler function in routes_bootstrap.py",
+      "path": "Archetype_Backend/api/routes_bootstrap.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:5a84cf72564655f6": {
+      "category": "dead-code",
+      "title": "Blueprint registration silently skips broken modules in app.py",
+      "path": "Archetype_Backend/app.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:e3d06f0bce7ba4cf": {
+      "category": "dead-code",
+      "title": "Bare except Exception return None in jwt_validator masks auth errors",
+      "path": "Archetype_Backend/infrastructure/auth/jwt_validator.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:59a9f402054d8f05": {
+      "category": "dead-code",
+      "title": "lib/validationTests.ts entirely dead code with no consumers",
+      "path": "archetype_frontend/src/lib/validationTests.ts",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:b0b4f82904fab58b": {
+      "category": "dead-code",
+      "title": "console.log debug statements throughout api/route.ts (~25 occurrences)",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
+      "history": []
+    },
+    "fp:e49218fbd9483505": {
+      "category": "dead-code",
+      "title": "Debug print statements in persona.py production code (20+ occurrences)",
+      "path": "Archetype_Backend/persona/persona.py",
+      "status": "open",
+      "first_seen": "2026-05-11",
+      "last_seen": "2026-05-11",
       "history": []
     }
   }
