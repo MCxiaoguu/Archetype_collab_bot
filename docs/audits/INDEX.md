@@ -12,6 +12,8 @@
 - **2026-04-26** - open: 88, suppressed: 0, new: 33
 Most recent first.
 
+- **2026-05-14** — open: 54, suppressed: 0, new: 7 (Backend@f85444d, Frontend@7bf3a47)
+
 - **2026-05-12** open=41, suppressed=0, new=25, carried=16
 - **2026-05-11** — 25 open, 0 suppressed
 - **2026-05-09** — 157 open, 0 suppressed
