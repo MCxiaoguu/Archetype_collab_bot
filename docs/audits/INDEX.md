@@ -1,5 +1,6 @@
 # Route audit run log
 
+- **2026-05-16** — open=56, suppressed=0, new=3 ([run](runs/2026-05-16.md))
 Most recent first.
 
 - [2026-05-15](runs/2026-05-15.md) — open=53, suppressed=0, new=3, fixed=4 (Backend@f85444d, Frontend@7bf3a47)
