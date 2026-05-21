@@ -4,6 +4,7 @@
 - **2026-05-17** — open=72, new=16, carried=56, suppressed=0 ([run](runs/2026-05-17.md))
 - **2026-05-16** — open=56, suppressed=0, new=3 ([run](runs/2026-05-16.md))
 Most recent first.
+- **2026-05-21** — open=81, suppressed=0, new=3 ([run log](runs/2026-05-21.md))
 
 - **2026-05-20** — open=78, suppressed=0, new=6 ([run](runs/2026-05-20.md))
 - **2026-05-19** -- open=72, suppressed=0, new=0  [runs/2026-05-19.md](runs/2026-05-19.md)
