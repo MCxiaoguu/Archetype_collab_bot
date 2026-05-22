@@ -35,3 +35,4 @@ Most recent first.
 - [2026-04-21 run 2](runs/2026-04-21.md) — 38 open, 0 suppressed (field-dup: 10, deprecation: 8, redundant-endpoint: 6, dead-code: 7, placement: 7)
 - **2026-04-21** — 25 open, 0 suppressed (run 2)
 - **2026-04-21** — 42 open, 0 suppressed
+- **2026-05-22** — open: 82 (new: 1), suppressed: 0 | [run](runs/2026-05-22.md)
