@@ -1,5 +1,6 @@
 # Route audit run log
 
+- [2026-06-02](runs/2026-06-02.md) — open=322, suppressed=14, new=6
 - **2026-05-29** — open=196, suppressed=13 (resolved false positives from prior runs)
 - **2026-05-30** — open=204, suppressed=14, new=9 (Backend@4e7725b, Frontend@4c6ded1)
 
