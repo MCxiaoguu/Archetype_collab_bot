@@ -1,6 +1,6 @@
 {
   "_schema": "route-audit/1",
-  "last_run": "2026-06-02",
+  "last_run": "2026-06-03",
   "findings": {
     "fp:8cd456b3caa9a00e": {
       "category": "field-dup",
@@ -2392,7 +2392,7 @@
       "path": "archetype_frontend/src/App.tsx",
       "status": "open",
       "first_seen": "2026-06-01",
-      "last_seen": "2026-06-02",
+      "last_seen": "2026-06-03",
       "history": []
     },
     "fp:00ef22bdc38a3c8f": {
@@ -2978,6 +2978,168 @@
       "status": "open",
       "first_seen": "2026-06-02",
       "last_seen": "2026-06-02",
+      "history": []
+    },
+    "fp:cb98a6946bd29b19": {
+      "category": "field-dup",
+      "title": "Dual-key fallback chains in create_validation_test (9 fields)",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:cca29c47a5e915ea": {
+      "category": "field-dup",
+      "title": "Persona identifier four-key fallback across routes_persona.py",
+      "path": "Archetype_Backend/api/routes_persona.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:b7fd5a73038bf562": {
+      "category": "field-dup",
+      "title": "testId (camelCase) vs test_id (snake_case) in frontend query params",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:82caafb119b55e10": {
+      "category": "deprecation",
+      "title": "Three deprecated endpoint pairs still registered (routes_session + routes_agent)",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:02b3d11ec0d015ca": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate test-results endpoints across two blueprints",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:b00003b15710a427": {
+      "category": "redundant-endpoint",
+      "title": "Duplicate reaction-results endpoints across two blueprints",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:bb75ee01584d7263": {
+      "category": "redundant-endpoint",
+      "title": "Two getPersonas functions with different purposes (naming collision)",
+      "path": "archetype_frontend/src/api/personaDetails.ts",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:64ae0a300cfce196": {
+      "category": "dead-code",
+      "title": "Silent except-pass in routes_events.py stale cursor check",
+      "path": "Archetype_Backend/api/routes_events.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:77fb1ca4333d218e": {
+      "category": "dead-code",
+      "title": "Silent except-pass in routes_agent.py request logging",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:c52305b79235899d": {
+      "category": "dead-code",
+      "title": "getReactionTestResults defined but never called in frontend",
+      "path": "archetype_frontend/src/api/route.ts",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:979bbabe40979fe4": {
+      "category": "dead-code",
+      "title": "Commented-out radarChartB code in deprecated SelectPersona",
+      "path": "archetype_frontend/src/pages/Dashboard/SelectPersona.tsx",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:04411fe759ed921a": {
+      "category": "dead-code",
+      "title": "Silent error swallowing in useUATTest polling fallback",
+      "path": "archetype_frontend/src/hooks/useUATTest.ts",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:b74513dbd2dc5cb7": {
+      "category": "dead-code",
+      "title": "Silent error swallowing in useValidationMonitor refetchSnapshot",
+      "path": "archetype_frontend/src/hooks/useValidationMonitor.ts",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:57bdce87bf917b26": {
+      "category": "placement",
+      "title": "Direct DB queries in routes_session.py get_session_live_url",
+      "path": "Archetype_Backend/api/routes_session.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:b9381e7e32fc45b9": {
+      "category": "placement",
+      "title": "Direct DB queries in routes_agent.py start_test_session",
+      "path": "Archetype_Backend/api/routes_agent.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:70a1cae26ed5b763": {
+      "category": "placement",
+      "title": "LLM client lazy-init in routes_bootstrap.py module scope",
+      "path": "Archetype_Backend/api/routes_bootstrap.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:c6e3f53b139794e2": {
+      "category": "placement",
+      "title": "DB queries in routes_analytics.py _load_test_for_user",
+      "path": "Archetype_Backend/api/routes_analytics.py",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "history": []
+    },
+    "fp:e59e0389d2f06137": {
+      "category": "placement",
+      "title": "Direct API call in BTWComposer component instead of hook",
+      "path": "archetype_frontend/src/components/workspace/validation-monitor/BTWComposer.tsx",
+      "status": "open",
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
       "history": []
     }
   }
