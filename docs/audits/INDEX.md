@@ -12,6 +12,9 @@
 - **2026-05-16** — open=56, suppressed=0, new=3 ([run](runs/2026-05-16.md))
 Most recent first.
 
+- **2026-06-04** — open=23, suppressed=0, new=4 (device auth field-dup, replay _iso_now, replay except fallback)
+
+
 - **2026-06-01** — open=80, suppressed=0 — [run](runs/2026-06-01.md)
 - **2026-05-31** — open=38, suppressed=0 (Backend@4e7725b, Frontend@4c6ded1)
 - **2026-05-21** — open=81, suppressed=0, new=3 ([run log](runs/2026-05-21.md))
