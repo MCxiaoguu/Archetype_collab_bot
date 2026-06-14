@@ -2,6 +2,7 @@
 
 - [2026-06-12](runs/2026-06-12.md) — open=137, suppressed=14, new=14
 - [2026-06-10](runs/2026-06-10.md) — open=114, suppressed=14, new=3
+- **2026-06-14** — 191 open (+19 new), 0 suppressed. Backend@4e7725b, Frontend@4c6ded1. No code changes; deeper scan found 19 new issues.
 - **2026-06-11** — open: 123, suppressed: 14 | [run](runs/2026-06-11.md)
 - **2026-06-09** — open=111 (new=4), suppressed=14 | [run](runs/2026-06-09.md)
 - **2026-06-08** — open=107, suppressed=14, new=72 ([run doc](runs/2026-06-08.md))
