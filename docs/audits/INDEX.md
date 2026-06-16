@@ -22,6 +22,7 @@
 - **2026-05-16** — open=56, suppressed=0, new=3 ([run](runs/2026-05-16.md))
 Most recent first.
 
+- **2026-06-16** — open=110, suppressed=0 — [run](runs/2026-06-16.md)
 - **2026-06-13** -- open=35, suppressed=0 (Backend@4e7725b, Frontend@4c6ded1)
 
 - [2026-06-05](runs/2026-06-05.md) — open=~97 (21 new), suppressed=14
