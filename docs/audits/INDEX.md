@@ -1,6 +1,7 @@
 # Route audit run log
 
 - **2026-06-15** — open=83, suppressed=0, new=49 | [run](runs/2026-06-15.md) Backend@4e7725b, Frontend@4c6ded1
+- [2026-06-17](runs/2026-06-17.md) -- open=41, suppressed=0
 - [2026-06-12](runs/2026-06-12.md) — open=137, suppressed=14, new=14
 - [2026-06-10](runs/2026-06-10.md) — open=114, suppressed=14, new=3
 - **2026-06-14** — 191 open (+19 new), 0 suppressed. Backend@4e7725b, Frontend@4c6ded1. No code changes; deeper scan found 19 new issues.
