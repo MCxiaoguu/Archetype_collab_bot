@@ -11,6 +11,7 @@ Most recent first.
 - **2026-06-15** — open=83, suppressed=0, new=49 | [run](runs/2026-06-15.md)
 - **2026-06-14** — open=191 (new=19), suppressed=0
 - **2026-06-13** — open=35, suppressed=0
+- [2026-06-21](runs/2026-06-21.md) — open=35, suppressed=0, new=35
 - [2026-06-12](runs/2026-06-12.md) — open=137, suppressed=14, new=14
 - **2026-06-11** — open=123, suppressed=14 | [run](runs/2026-06-11.md)
 - [2026-06-10](runs/2026-06-10.md) — open=114, suppressed=14, new=3
