@@ -2,6 +2,8 @@
 
 Most recent first.
 
+- [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
+- [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
 - **2026-06-20** — open: 51, suppressed: 0, new: 50
 
 - **2026-06-19** — open=98 (new=25), suppressed=0 | [run](runs/2026-06-19.md) Backend@4e7725b, Frontend@4c6ded1
