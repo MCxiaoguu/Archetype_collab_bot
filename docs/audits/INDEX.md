@@ -2,6 +2,7 @@
 
 Most recent first.
 
+- **2026-06-23** — open=38, suppressed=0 ([run](runs/2026-06-23.md))
 - [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
 - [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
 - **2026-06-20** — open: 51, suppressed: 0, new: 50
