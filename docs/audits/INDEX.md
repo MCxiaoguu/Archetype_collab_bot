@@ -4,6 +4,7 @@ Most recent first.
 
 - **2026-06-24** — open=46, suppressed=0 | [run](runs/2026-06-24.md)
 - **2026-06-23** — open=38, suppressed=0 ([run](runs/2026-06-23.md))
+- [2026-06-25](runs/2026-06-25.md) -- 30 open, 0 suppressed (4e7725b / 4c6ded1)
 - [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
 - [2026-06-22](runs/2026-06-22.md) — open=21, suppressed=0
 - **2026-06-20** — open: 51, suppressed: 0, new: 50
