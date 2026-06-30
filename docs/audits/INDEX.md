@@ -4,6 +4,7 @@
 - [2026-06-28](runs/2026-06-28.md) — open=60, suppressed=0, new=7
 Most recent first.
 
+- **2026-06-30** — 41 open, 0 suppressed (BE@4e7725b FE@4c6ded1)
 - [2026-06-27](runs/2026-06-27.md) — open=53 (new=13), suppressed=0 (4e7725b / 4c6ded1)
 - [2026-06-26](runs/2026-06-26.md) — open=40, suppressed=0 (4e7725b / 4c6ded1)
 - **2026-06-24** — open=46, suppressed=0 | [run](runs/2026-06-24.md)
