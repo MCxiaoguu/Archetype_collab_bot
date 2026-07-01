@@ -1,5 +1,7 @@
 # Route audit run log
 
+- [2026-07-01](runs/2026-07-01.md) — open=50, suppressed=0, new=46 (BE@4e7725b FE@4c6ded1)
+
 - [2026-06-29](runs/2026-06-29.md) — 89 open (29 new), 0 suppressed
 - [2026-06-28](runs/2026-06-28.md) — open=60, suppressed=0, new=7
 Most recent first.
