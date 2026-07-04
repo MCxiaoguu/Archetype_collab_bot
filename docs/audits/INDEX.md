@@ -2,6 +2,8 @@
 
 Most recent first.
 
+- **2026-07-04** — open=74, suppressed=0, new=8 (Backend@4e7725b, Frontend@4c6ded1)
+
 - [2026-07-03](runs/2026-07-03.md) — open=66, suppressed=0, new=16 (BE@4e7725b FE@4c6ded1)
 - [2026-07-02](runs/2026-07-02.md) — open=50, suppressed=0 (BE@4e7725b FE@4c6ded1)
 - [2026-07-01](runs/2026-07-01.md) — open=50, suppressed=0, new=46 (BE@4e7725b FE@4c6ded1)
